@@ -1523,6 +1523,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  arSession: {fileID: 0}
+  xrOriginAR: {fileID: 0}
 --- !u!4 &1811167656
 Transform:
   m_ObjectHideFlags: 0
@@ -1552,7 +1554,7 @@ GameObject:
   - component: {fileID: 1821549077}
   - component: {fileID: 1821549078}
   m_Layer: 0
-  m_Name: XR Origin (XR Rig)
+  m_Name: XR Origin VR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2310,8 +2312,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1093491104}
   - {fileID: 1064781256}
-  - {fileID: 1821549076}
   - {fileID: 453635550}
+  - {fileID: 1821549076}
   - {fileID: 528755897}
   - {fileID: 1811167656}
   - {fileID: 215457827}

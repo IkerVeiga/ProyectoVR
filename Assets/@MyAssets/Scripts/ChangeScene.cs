@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.Management;
 
 public class ChangeScene : MonoBehaviour
 {
@@ -38,11 +39,22 @@ public class ChangeScene : MonoBehaviour
             {
                 o.SetActive(false);
             }
+            XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
+            if (XRGeneralSettings.Instance.Manager.activeLoader != null)
+            {
+                XRGeneralSettings.Instance.Manager.StartSubsystems();
+            }
             SceneManager.LoadScene("VR");
+
 
         }
         if(SceneManager.GetActiveScene().name == "VR")
         {
+            if (XRGeneralSettings.Instance.Manager.activeLoader != null)
+            {
+                XRGeneralSettings.Instance.Manager.StopSubsystems();
+                XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+            }
             SceneManager.LoadScene("AR");
             foreach (GameObject o in arObjects)
             {

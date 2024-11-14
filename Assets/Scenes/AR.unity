@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 1619959263}
   - component: {fileID: 1619959262}
   m_Layer: 0
-  m_Name: XR Origin (XR Rig)
+  m_Name: XR Origin AR
   m_TagString: AR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1770,8 +1770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  arSession: {fileID: 0}
-  xrOriginAR: {fileID: 0}
+  arSession: {fileID: 806387842}
+  xrOriginAR: {fileID: 1619959264}
 --- !u!1 &1995861766
 GameObject:
   m_ObjectHideFlags: 0
