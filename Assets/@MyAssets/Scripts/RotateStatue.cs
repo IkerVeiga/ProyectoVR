@@ -5,8 +5,8 @@ using UnityEngine;
 public class RotateStatue : MonoBehaviour
 {
     public GameObject statue; // El objeto a rotar
-    public float rotationAmount = 25f; // Grados de rotación
-    public float duration = 1f; // Tiempo en segundos para completar la rotación
+    public float rotationAmount; // Grados de rotación
+    public float duration; // Tiempo en segundos para completar la rotación
 
     private bool isRotating = false; // Evita que inicies múltiples rotaciones a la vez
 
@@ -14,11 +14,11 @@ public class RotateStatue : MonoBehaviour
     {
         if (!isRotating) // Verificar que no haya otra rotación en curso
         {
-            StartCoroutine(RotateOverTime(rotationAmount, duration));
+            StartCoroutine(Rotate(rotationAmount, duration));
         }
     }
 
-    private IEnumerator RotateOverTime(float rotationY, float time)
+    private IEnumerator Rotate(float rotationY, float time)
     {
         isRotating = true;
 
