@@ -1341,6 +1341,8 @@ GameObject:
   - component: {fileID: 1758891875}
   - component: {fileID: 1758891874}
   - component: {fileID: 1758891876}
+  - component: {fileID: 1758891878}
+  - component: {fileID: 1758891877}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1782,6 +1784,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1758891877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758891873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca216de3aa8ca4843946563dcc4bb887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeManager: {fileID: 1619959262}
+--- !u!114 &1758891878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758891873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfea3821df6d39740a64f6602d543486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallManager: {fileID: 1758891877}
+  portalPrefab: {fileID: 2954897149321725897, guid: 0bd75bc28e746e64e84cc42c4cc50806, type: 3}
+  offset: 0
+  buffer: 0
 --- !u!1 &1995861766
 GameObject:
   m_ObjectHideFlags: 0
