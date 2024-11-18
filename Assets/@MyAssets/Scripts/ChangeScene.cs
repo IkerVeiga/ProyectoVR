@@ -10,56 +10,30 @@ using UnityEngine.XR.Management;
 public class ChangeScene : MonoBehaviour
 {
     [SerializeField] private InputActionAsset actionAsset;
-    [SerializeField] private ARSession arSession;
-    [SerializeField] private XROrigin xrOriginAR;
-    private GameObject[] arObjects;
+    //[SerializeField] private ARSession arSession;
+    //[SerializeField] private XROrigin xrOriginAR;
+    //private GameObject[] arObjects;
     // Start is called before the first frame update
     void Start()
     {
-        arObjects = GameObject.FindGameObjectsWithTag("AR");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnEnable()
-    {
-        actionAsset.FindAction("ChangeScene").performed += changeVRAR;
+        //arObjects = GameObject.FindGameObjectsWithTag("AR");
+        XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
+        XRGeneralSettings.Instance.Manager.StartSubsystems();
     }
 
 
     public void changeVRAR(InputAction.CallbackContext context)
     {
-        if(SceneManager.GetActiveScene().name == "AR")
-        {
-            foreach(GameObject o in arObjects)
-            {
-                o.SetActive(false);
-            }
-            XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
-            if (XRGeneralSettings.Instance.Manager.activeLoader != null)
-            {
-                XRGeneralSettings.Instance.Manager.StartSubsystems();
-            }
-            SceneManager.LoadScene("VR");
+        XRGeneralSettings.Instance.Manager.StopSubsystems();
+        XRGeneralSettings.Instance.Manager.DeinitializeLoader();
 
-
-        }
-        if(SceneManager.GetActiveScene().name == "VR")
+        if (SceneManager.GetActiveScene().name == "AR")
         {
-            if (XRGeneralSettings.Instance.Manager.activeLoader != null)
-            {
-                XRGeneralSettings.Instance.Manager.StopSubsystems();
-                XRGeneralSettings.Instance.Manager.DeinitializeLoader();
-            }
-            SceneManager.LoadScene("AR");
-            foreach (GameObject o in arObjects)
-            {
-                o.SetActive(true);
-            }
+            SceneManager.LoadScene("AR2", LoadSceneMode.Single);
+
+        } else if (SceneManager.GetActiveScene().name == "VR")
+        {
+            SceneManager.LoadScene("AR", LoadSceneMode.Single);
         }
     }
 }
