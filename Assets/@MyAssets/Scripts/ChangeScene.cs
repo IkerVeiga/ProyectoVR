@@ -29,7 +29,7 @@ public class ChangeScene : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "AR")
         {
-            SceneManager.LoadScene("AR2", LoadSceneMode.Single);
+            SceneManager.LoadScene("VR", LoadSceneMode.Single);
 
         } else if (SceneManager.GetActiveScene().name == "VR")
         {
