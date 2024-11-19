@@ -1783,7 +1783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa500ddc7aee0c4b89491beb5d4de58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  Instance: {fileID: 0}
 --- !u!114 &1758891877
 MonoBehaviour:
   m_ObjectHideFlags: 0

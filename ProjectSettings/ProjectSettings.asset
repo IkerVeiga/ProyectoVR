@@ -164,7 +164,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.TheCommittee.ProyectoVR
+    Android: com.TheCommittee.ProyectoVR2
     Standalone: com.TheCommittee.ProyectoVideojuegoVR
   buildNumber:
     Standalone: 0

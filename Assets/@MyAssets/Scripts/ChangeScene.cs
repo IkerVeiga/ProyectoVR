@@ -9,14 +9,29 @@ using UnityEngine.XR.Management;
 
 public class ChangeScene : MonoBehaviour
 {
-    [SerializeField] private InputActionAsset actionAsset;
-    //[SerializeField] private ARSession arSession;
-    //[SerializeField] private XROrigin xrOriginAR;
-    //private GameObject[] arObjects;
-    // Start is called before the first frame update
-    void Start()
+    public ChangeScene Instance;
+
+    private void Awake()
     {
-        //arObjects = GameObject.FindGameObjectsWithTag("AR");
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
         XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
         XRGeneralSettings.Instance.Manager.StartSubsystems();
     }
