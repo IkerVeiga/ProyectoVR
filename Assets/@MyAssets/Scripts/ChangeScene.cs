@@ -11,8 +11,16 @@ public class ChangeScene : MonoBehaviour
 {
     public ChangeScene Instance;
 
+    private ARSession arSession;
+
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
     private void Awake()
     {
+        
+
         if (Instance == null)
         {
             DontDestroyOnLoad(this.gameObject);

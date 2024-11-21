@@ -28,8 +28,6 @@ public class TimeInOtherDimension : MonoBehaviour
         ManageTime();
         if(minutes == 0 && seconds == 0)
         {
-            XRGeneralSettings.Instance.Manager.StopSubsystems();
-            XRGeneralSettings.Instance.Manager.DeinitializeLoader();
             SceneManager.LoadScene("AR");
         }
     }

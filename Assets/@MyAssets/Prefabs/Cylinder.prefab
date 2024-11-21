@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5867439036407401948}
   - component: {fileID: 2388044462670524352}
   - component: {fileID: 7684127988823858452}
-  - component: {fileID: 9073426776364416062}
   - component: {fileID: 1025053840481566052}
+  - component: {fileID: 9027560911220034869}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -105,11 +105,23 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.5
+  m_Height: 0
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &9073426776364416062
+  m_Center: {x: 0.000000059604645, y: -1.18, z: -0.00000008940697}
+--- !u!114 &1025053840481566052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2954897149321725897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9027560911220034869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +174,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1025053840481566052}
         m_TargetAssemblyTypeName: PortalGrab, Assembly-CSharp
-        m_MethodName: PortalGrabSceneChange
+        m_MethodName: GoToOtherDimension
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -223,15 +235,3 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1025053840481566052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2954897149321725897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
