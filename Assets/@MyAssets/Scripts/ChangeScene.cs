@@ -37,19 +37,19 @@ public class ChangeScene : MonoBehaviour
     }
 
 
-    public void changeVRAR(InputAction.CallbackContext context)
-    {
-        XRGeneralSettings.Instance.Manager.StopSubsystems();
-        XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+    //public void changeVRAR(InputAction.CallbackContext context)
+    //{
+    //    XRGeneralSettings.Instance.Manager.StopSubsystems();
+    //    XRGeneralSettings.Instance.Manager.DeinitializeLoader();
 
-        if (SceneManager.GetActiveScene().name == "AR")
-        {
-            SceneManager.LoadScene("VR", LoadSceneMode.Single);
+    //    if (SceneManager.GetActiveScene().name == "AR")
+    //    {
+    //        SceneManager.LoadScene("VR", LoadSceneMode.Single);
 
-        } else if (SceneManager.GetActiveScene().name == "VR")
-        {
-            SceneManager.LoadScene("AR", LoadSceneMode.Single);
-        }
-    }
+    //    } else if (SceneManager.GetActiveScene().name == "VR")
+    //    {
+    //        SceneManager.LoadScene("AR", LoadSceneMode.Single);
+    //    }
+    //}
 }
 
