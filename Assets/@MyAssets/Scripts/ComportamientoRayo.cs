@@ -59,7 +59,6 @@ public class ComportamientoRayo : MonoBehaviour
                     // Si el rayo choca con un espejo, calcula la nueva dirección
                     direccion = Vector3.Reflect(direccion, hit.normal);
                     origen = hit.point;
-                    Debug.Log("Espejo");
                 }
                 else
                 {
