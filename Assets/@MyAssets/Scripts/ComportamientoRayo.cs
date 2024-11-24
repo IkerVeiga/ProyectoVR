@@ -9,6 +9,13 @@ public class ComportamientoRayo : MonoBehaviour
     public LineRenderer lineRenderer; // Componente para visualizar el rayo
     public Material material; // Material para cambiar el color del rayo
 
+    public Transform objetoMover; // Objeto que se moverá
+    public Vector3 posicionInicialObjeto; // Posición inicial del objeto
+    public float nuevaPosicionY; // Nueva posición Y del objeto cuando choca con "Final"
+    public float velocidadTransicion = 2f; // Velocidad de la transición de movimiento
+
+    private bool haChocadoConFinal = false; // Estado del rayo
+
     void Start()
     {
         if (lineRenderer == null)
@@ -16,27 +23,34 @@ public class ComportamientoRayo : MonoBehaviour
             lineRenderer = GetComponent<LineRenderer>();
         }
 
-        // Ancho constante
+        // Ancho constante del rayo
         lineRenderer.startWidth = 0.05f;
         lineRenderer.endWidth = 0.05f;
 
-        // Opcional: Configurar curva
+        // Opcional: Configurar curva de ancho
         AnimationCurve curve = new AnimationCurve();
-        curve.AddKey(0f, 0.05f); // Inicio de la línea
-        curve.AddKey(1f, 0.1f); // Final de la línea
+        curve.AddKey(0f, 0.05f); // Inicio del rayo
+        curve.AddKey(1f, 0.1f); // Final del rayo
         lineRenderer.widthCurve = curve;
+
+        // Guardar la posición inicial del objeto
+        if (objetoMover != null)
+        {
+            posicionInicialObjeto = objetoMover.position;
+        }
     }
 
     void Update()
     {
         DibujarRayo();
+        MoverObjeto();
     }
 
     void DibujarRayo()
     {
         Vector3 origen = transform.position;
         Vector3 direccion = transform.forward; // Dirección inicial del rayo
-        bool haChocadoConFinal = false;
+        haChocadoConFinal = false;
 
         lineRenderer.positionCount = 1;
         lineRenderer.SetPosition(0, origen);
@@ -90,5 +104,27 @@ public class ComportamientoRayo : MonoBehaviour
             material.color = Color.red; // Cambiar a rojo si no choca con "Final"
         }
         lineRenderer.material = material; // Actualizar el material del LineRenderer
+    }
+
+    void MoverObjeto()
+    {
+        if (objetoMover != null)
+        {
+            Vector3 posicionObjetivo;
+
+            if (haChocadoConFinal)
+            {
+                // Nueva posición en Y si choca con "Final"
+                posicionObjetivo = new Vector3(objetoMover.position.x, nuevaPosicionY, objetoMover.position.z);
+            }
+            else
+            {
+                // Volver a la posición inicial si no hay colisión
+                posicionObjetivo = posicionInicialObjeto;
+            }
+
+            // Interpolación para un movimiento suave
+            objetoMover.position = Vector3.Lerp(objetoMover.position, posicionObjetivo, Time.deltaTime * velocidadTransicion);
+        }
     }
 }
