@@ -4,6 +4,6 @@ public class PortalGrab : MonoBehaviour
 {
     public void PortalGrabSceneChange()
     {
-        
+
     }
 }
