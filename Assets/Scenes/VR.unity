@@ -15693,13 +15693,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085056451}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.17561838, y: -0.6848239, z: 0.6850628, w: -0.17567968}
-  m_LocalPosition: {x: 63, y: 3.81, z: 53.48}
-  m_LocalScale: {x: 0.20000003, y: 1, z: 0.35}
+  m_LocalRotation: {x: -0.0065401047, y: -0.70696735, z: 0.7071846, w: -0.0066568255}
+  m_LocalPosition: {x: 0.001153022, y: -0.9200001, z: -1.0735456}
+  m_LocalScale: {x: 0.20000002, y: 1, z: 0.34999996}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 121936461}
-  m_Father: {fileID: 1485356667}
+  m_Father: {fileID: 1387127140}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 208.766}
 --- !u!1001 &1086237412
 PrefabInstance:
@@ -18440,6 +18440,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7d22648c610059645bf21e118d5c39df, type: 3}
   m_PrefabInstance: {fileID: 1385378048}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1387127140 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8677520617865754159, guid: af7e8063a33d5f74e921da2b2e23eaa6, type: 3}
+  m_PrefabInstance: {fileID: 5781751000827750885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1394288861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 413554, guid: 50294217694c1a145a9a3b86f853c022, type: 3}
@@ -19573,7 +19578,6 @@ Transform:
   - {fileID: 1443002669}
   - {fileID: 24024570}
   - {fileID: 2012788060}
-  - {fileID: 1085056455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1490826975 stripped
@@ -26401,7 +26405,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8677520617865754159, guid: af7e8063a33d5f74e921da2b2e23eaa6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1085056455}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e8063a33d5f74e921da2b2e23eaa6, type: 3}
 --- !u!1001 &8146114582341686025
