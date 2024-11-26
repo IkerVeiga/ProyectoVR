@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SessionSingleton : MonoBehaviour
@@ -11,7 +9,8 @@ public class SessionSingleton : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-        } else
+        }
+        else
         {
             Destroy(this);
         }

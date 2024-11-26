@@ -9,14 +9,6 @@ using UnityEngine.XR.Management;
 
 public class ChangeScene : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    [SerializeField] private InputActionAsset actionAsset;
-    //[SerializeField] private ARSession arSession;
-    //[SerializeField] private XROrigin xrOriginAR;
-    //private GameObject[] arObjects;
-    // Start is called before the first frame update
-    void Start()
-=======
     public ChangeScene Instance;
 
     private void Awake()
@@ -26,7 +18,6 @@ public class ChangeScene : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
             Instance = this;
-            StartCoroutine(changeScene());
         }
         else
         {
@@ -40,15 +31,13 @@ public class ChangeScene : MonoBehaviour
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
->>>>>>> Stashed changes
     {
-        //arObjects = GameObject.FindGameObjectsWithTag("AR");
         XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
         XRGeneralSettings.Instance.Manager.StartSubsystems();
     }
 
 
-    public void changeVRAR()
+    public void changeVRAR(InputAction.CallbackContext context)
     {
         XRGeneralSettings.Instance.Manager.StopSubsystems();
         XRGeneralSettings.Instance.Manager.DeinitializeLoader();
@@ -61,16 +50,6 @@ public class ChangeScene : MonoBehaviour
         {
             SceneManager.LoadScene("AR", LoadSceneMode.Single);
         }
-    }
-
-    IEnumerator changeScene()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(5);
-            changeVRAR();
-        }
-
     }
 }
 
