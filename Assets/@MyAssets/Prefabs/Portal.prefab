@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 8474219169230514994}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,10 +152,10 @@ GameObject:
   - component: {fileID: 4400355839986379159}
   - component: {fileID: 1409217670119958519}
   - component: {fileID: 1923940666512854919}
-  - component: {fileID: 6621472943327165851}
+  - component: {fileID: 9164900667668863374}
   m_Layer: 0
   m_Name: MaskedPortal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,17 +248,17 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &6621472943327165851
+--- !u!114 &9164900667668863374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7965499321736238434}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03815a6cf3159b6429875dc859e51c2f, type: 3}
+  m_Script: {fileID: 11500000, guid: dc932ca0bc4d3aa47b4536137bbde7b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusTime: 2
   realPortal: {fileID: 3776275554887312988}
+  focusTime: 2
