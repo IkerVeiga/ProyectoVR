@@ -32,7 +32,22 @@ public class Pipe : MonoBehaviour
     {
         if (isConnected) return;
         isConnected = true;
-        gameObject.GetComponent<Renderer>().material.color = Color.red;
+        if (gameObject.transform.childCount == 0)
+        {
+            gameObject.GetComponent<Renderer>().material.color = Color.red;
+        }
+        else //Igual luego quitar este if
+        {
+            for (int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                Renderer renderer = gameObject.transform.GetChild(i).GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderer.material.color = Color.red;
+                }
+            }
+        }
+        
         connectedPipes.ForEach(pipe => pipe.ConnectToCircuit());
     }
 }
