@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DisplayDiaryText : MonoBehaviour
@@ -21,15 +22,21 @@ public class DisplayDiaryText : MonoBehaviour
 
     public IEnumerator DisplayText()
     {
+        yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < text.Length; i++)
         {
-            this.text += text[i];
+            this.GetComponent<TextMeshProUGUI>().text += text[i];
             yield return new WaitForSeconds(time);
         }
     }
 
-    public void Display()
+    private void OnEnable()
     {
         StartCoroutine(DisplayText());
+    }
+
+    private void OnDisable()
+    {
+        this.GetComponent<TextMeshProUGUI>().text = "";
     }
 }
