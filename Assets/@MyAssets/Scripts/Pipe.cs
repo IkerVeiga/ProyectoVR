@@ -24,7 +24,21 @@ public class Pipe : MonoBehaviour
     {
         if (!isConnected) return;
         isConnected = false;
-        gameObject.GetComponent<Renderer>().material.color = Color.white;
+        if (gameObject.transform.childCount == 0)
+        {
+            gameObject.GetComponent<Renderer>().material.color = Color.white;
+        }
+        else //Igual luego quitar este if
+        {
+            for (int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                Renderer renderer = gameObject.transform.GetChild(i).GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderer.material.color = Color.white;
+                }
+            }
+        }
         connectedPipes.ForEach(pipe => pipe.Disconnect());
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public enum Connections {
@@ -12,6 +13,11 @@ public class GrabablePipe : Pipe
     [SerializeField] private List<Connections> rotatedConnections;
 
     public List<Connections> RotatedConnections { get => rotatedConnections;}
+
+    private void Update()
+    {
+        FindObjectOfType<TextMeshProUGUI>().text = transform.rotation.eulerAngles.ToString();
+    }
 
     public void RotateConnections(int steps, bool flipy, bool flipz)
     {
