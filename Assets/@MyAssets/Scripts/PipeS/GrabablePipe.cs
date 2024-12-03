@@ -21,7 +21,6 @@ public class GrabablePipe : Pipe
 
     public void RotateConnections(int steps, bool flipy, bool flipz)
     {
-        //Rotation on X
         rotatedConnections = new List<Connections>(originalConnections);
         for (int i = 0; i < steps; i++)
         {
@@ -44,36 +43,6 @@ public class GrabablePipe : Pipe
                 }
             }
             
-        }
-        for (int j = 0; j < rotatedConnections.Count; j++)
-        {
-            switch (rotatedConnections[j])
-            {
-                case Connections.UP:
-                    if (flipz)
-                    {
-                        rotatedConnections[j] = Connections.DOWN;
-                    }
-                    break;
-                case Connections.DOWN:
-                    if (flipz)
-                    {
-                        rotatedConnections[j] = Connections.UP;
-                    }
-                    break;
-                case Connections.LEFT:
-                    if (flipy)
-                    {
-                        rotatedConnections[j] = Connections.RIGHT;
-                    }
-                    break;
-                case Connections.RIGHT:
-                    if (flipy)
-                    {
-                        rotatedConnections[j] = Connections.LEFT;
-                    }
-                    break;
-            }
         }
     }
 }
