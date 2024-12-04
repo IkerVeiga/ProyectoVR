@@ -1,12 +1,4 @@
 using UnityEngine;
-<<<<<<< HEAD
-
-public class PortalGrab : MonoBehaviour
-{
-    public void PortalGrabSceneChange()
-    {
-
-=======
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
@@ -24,6 +16,6 @@ public class PortalGrab : MonoBehaviour
         {
             SceneManager.LoadScene("VR", LoadSceneMode.Single);
         }
->>>>>>> realidadMixta
+
     }
 }
