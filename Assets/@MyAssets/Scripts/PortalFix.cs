@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class PortalFix : MonoBehaviour
 {
-    [SerializeField] private float focusTime;
     [SerializeField] private GameObject realPortal;
-
-    private Renderer theRenderer;
+    [SerializeField] private float focusTime;
     private float timer;
 
-    void Start()
+    public float rayTargeted()
     {
-        theRenderer = GetComponent<Renderer>();
-    }
-
-    private void Update()
-    {
-        if (theRenderer.isVisible == true)
-        {
-            timer += Time.deltaTime;
-        }
+        Debug.Log("Raycasted");
+        timer += Time.deltaTime;
         if (timer >= focusTime)
         {
             realPortal.SetActive(true);
+            gameObject.SetActive(false);
         }
+        return timer / focusTime;
     }
 }
+

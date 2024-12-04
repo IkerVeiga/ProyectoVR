@@ -7,6 +7,7 @@ TagManager:
   - AR
   - Espejo
   - Final
+  - Portal
   layers:
   - Default
   - TransparentFX
