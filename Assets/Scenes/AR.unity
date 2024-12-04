@@ -3567,7 +3567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1874455569
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4583,6 +4583,10 @@ PrefabInstance:
       value: Portal
       objectReference: {fileID: 0}
     - target: {fileID: 3589920384695578090, guid: 1cd5ab42e49a08d4c9134d641d7ced01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809202544066435133, guid: 1cd5ab42e49a08d4c9134d641d7ced01, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
