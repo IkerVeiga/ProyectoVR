@@ -5,9 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - AR
+<<<<<<< HEAD
   - Espejo
   - Final
   - Portal
+=======
+  - Hand
+>>>>>>> realidadMixta
   layers:
   - Default
   - TransparentFX
@@ -15,6 +19,7 @@ TagManager:
   - 
   - Water
   - UI
+  - Portal
   - 
   - 
   - 
@@ -38,7 +43,10 @@ TagManager:
   - 
   - 
   - 
+<<<<<<< HEAD
   - 
+=======
+>>>>>>> realidadMixta
   - XR Simulation
   - 
   m_SortingLayers:

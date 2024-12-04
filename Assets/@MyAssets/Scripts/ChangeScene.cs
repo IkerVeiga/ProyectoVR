@@ -10,7 +10,12 @@ using UnityEngine.XR.Management;
 public class ChangeScene : MonoBehaviour
 {
     public ChangeScene Instance;
+    private ARSession arSession;
 
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
     private void Awake()
     {
         if (Instance == null)
@@ -37,19 +42,19 @@ public class ChangeScene : MonoBehaviour
     }
 
 
-    public void changeVRAR(InputAction.CallbackContext context)
-    {
-        XRGeneralSettings.Instance.Manager.StopSubsystems();
-        XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+    //public void changeVRAR(InputAction.CallbackContext context)
+    //{
+    //    XRGeneralSettings.Instance.Manager.StopSubsystems();
+    //    XRGeneralSettings.Instance.Manager.DeinitializeLoader();
 
-        if (SceneManager.GetActiveScene().name == "AR")
-        {
-            SceneManager.LoadScene("VR", LoadSceneMode.Single);
+    //    if (SceneManager.GetActiveScene().name == "AR")
+    //    {
+    //        SceneManager.LoadScene("VR", LoadSceneMode.Single);
 
-        } else if (SceneManager.GetActiveScene().name == "VR")
-        {
-            SceneManager.LoadScene("AR", LoadSceneMode.Single);
-        }
-    }
+    //    } else if (SceneManager.GetActiveScene().name == "VR")
+    //    {
+    //        SceneManager.LoadScene("AR", LoadSceneMode.Single);
+    //    }
+    //}
 }
 

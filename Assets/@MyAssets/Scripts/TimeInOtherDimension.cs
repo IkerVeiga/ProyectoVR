@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.Management;
 
 public class TimeInOtherDimension : MonoBehaviour
 {
     [SerializeField] private float maxTime; //en segundos
-    [SerializeField] private TextMeshProUGUI timeGUI;
+    
+    private GameObject timeGUI;
 
     private float chrono = 0;
     private string timeText;
@@ -16,7 +18,7 @@ public class TimeInOtherDimension : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeGUI = GameObject.Find("XR Origin (XR Rig)");
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class TimeInOtherDimension : MonoBehaviour
             secondsString = "0" + secondsString;
         }
         timeText = minutes + ":" + secondsString;
-        timeGUI.text = timeText;
+        timeGUI.GetComponentInChildren<TextMeshProUGUI>().text = timeText;
 
     }
 
