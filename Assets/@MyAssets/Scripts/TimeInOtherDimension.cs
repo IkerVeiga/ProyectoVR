@@ -36,6 +36,7 @@ public class TimeInOtherDimension : MonoBehaviour
     {
         minutes = (int) ((maxTime - chrono) / 60);
         seconds = (int) ((maxTime - chrono) % 60);
+        Debug.Log("Minutes: " + minutes + " Seconds: " + seconds);
         string secondsString = seconds.ToString();
         if (secondsString.Length == 1)
         {
