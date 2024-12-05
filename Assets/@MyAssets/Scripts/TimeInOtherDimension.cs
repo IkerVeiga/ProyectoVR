@@ -43,6 +43,21 @@ public class TimeInOtherDimension : MonoBehaviour
             secondsString = "0" + secondsString;
         }
         timeText = minutes + ":" + secondsString;
+
+        if (seconds <= 10)
+        {
+            timeGUI.GetComponent<AudioSource>().Play();
+        }
+
+        if (seconds <= 10 && (seconds % 2) == 0 )
+        {
+            timeGUI.GetComponentInChildren<TextMeshProUGUI>().color = Color.red;
+        }
+        else
+        {
+            timeGUI.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+        }
+
         timeGUI.GetComponentInChildren<TextMeshProUGUI>().text = timeText;
 
     }
