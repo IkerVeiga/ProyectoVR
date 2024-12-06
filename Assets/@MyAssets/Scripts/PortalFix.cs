@@ -16,6 +16,7 @@ public class PortalFix : MonoBehaviour
         {
             realPortal.SetActive(true);
             gameObject.SetActive(false);
+            realPortal.GetComponent<AudioSource>().Play();
         }
         return timer / focusTime;
     }
