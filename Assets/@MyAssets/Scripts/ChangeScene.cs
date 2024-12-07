@@ -41,6 +41,8 @@ public class ChangeScene : MonoBehaviour
         XRGeneralSettings.Instance.Manager.StartSubsystems();
     }
 
+    
+
 
     //public void changeVRAR(InputAction.CallbackContext context)
     //{
