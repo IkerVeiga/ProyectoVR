@@ -12,6 +12,8 @@ public class PortalGrab : MonoBehaviour
     {
         XRGeneralSettings.Instance.Manager.StopSubsystems();
         XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+        string dataToKeep = this.gameObject.layer.ToString();
+        StaticData.valueToKeep = dataToKeep;
         if (SceneManager.GetActiveScene().name == "AR")
         {
             SceneManager.LoadScene("VR", LoadSceneMode.Single);
