@@ -12,7 +12,7 @@ public class ComportamientoRayo : MonoBehaviour
     public Transform objetoMover; // Objeto que se moverá
     public Vector3 posicionInicialObjeto; // Posición inicial del objeto
     public float nuevaPosicionY; // Nueva posición Y del objeto cuando choca con "Final"
-    public float velocidadTransicion = 2f; // Velocidad de la transición de movimiento
+    public float velocidadTransicion; // Velocidad de la transición de movimiento
 
     private bool haChocadoConFinal = false; // Estado del rayo
 
