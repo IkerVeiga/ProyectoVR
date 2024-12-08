@@ -24,15 +24,16 @@ public class Pipe : MonoBehaviour
     {
         if (!isConnected) return;
         isConnected = false;
-        if (gameObject.transform.childCount == 0)
+        Renderer renderer = gameObject.GetComponent<Renderer>();
+        if (renderer != null)
         {
-            gameObject.GetComponent<Renderer>().material.color = Color.white;
+            renderer.material.color = Color.white;
         }
         else //Igual luego quitar este if
         {
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
-                Renderer renderer = gameObject.transform.GetChild(i).GetComponent<Renderer>();
+                renderer = gameObject.transform.GetChild(i).GetComponent<Renderer>();
                 if (renderer != null)
                 {
                     renderer.material.color = Color.white;
@@ -46,15 +47,16 @@ public class Pipe : MonoBehaviour
     {
         if (isConnected) return;
         isConnected = true;
-        if (gameObject.transform.childCount == 0)
+        Renderer renderer = gameObject.GetComponent<Renderer>();
+        if (renderer != null)
         {
-            gameObject.GetComponent<Renderer>().material.color = Color.red;
+            renderer.material.color = Color.red;
         }
-        else //Igual luego quitar este if
+        else
         {
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
-                Renderer renderer = gameObject.transform.GetChild(i).GetComponent<Renderer>();
+                renderer = gameObject.transform.GetChild(i).GetComponent<Renderer>();
                 if (renderer != null)
                 {
                     renderer.material.color = Color.red;

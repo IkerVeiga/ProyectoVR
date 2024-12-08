@@ -36,7 +36,7 @@ public class PipeSocket : MonoBehaviour
         pipe.ConnectedPipes.Clear();
         for (int i = 0; i < 90; i+= increment)
         {
-            transform.Rotate(1, 0, 0);
+            transform.RotateAround(transform.position, transform.forward, -1);
             yield return new WaitForSeconds(waitTime);
         }
         steps = (steps + 1) % 4;
@@ -86,7 +86,7 @@ public class PipeSocket : MonoBehaviour
             p.ConnectedPipes.Remove(pipe);
         }
         pipe.ConnectedPipes.Clear();
-        if (source.isOn)
+        if (source != null && source.isOn)
         {
             source.ConnectAsSource();
         }
