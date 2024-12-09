@@ -17,11 +17,13 @@ public class PortalFixRaycast : MonoBehaviour
             {
                 slider.gameObject.SetActive(true);
                 slider.value = target.GetComponent<PortalFix>().rayTargeted();
-            } else
+            }
+            else
             {
                 slider.gameObject.SetActive(false);
             }
-        } else
+        }
+        else
         {
             slider.gameObject.SetActive(false);
         }
