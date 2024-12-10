@@ -19,7 +19,7 @@ public class TimeInOtherDimension : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //watchBeep = xrOrigin.GetComponent<AudioSource>();
+        watchBeep = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
