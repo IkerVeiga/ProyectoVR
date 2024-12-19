@@ -6,6 +6,7 @@ using UnityEngine.XR.Management;
 
 public class PortalGrab : MonoBehaviour
 {
+    public static int contadorPortales;
     private ARSession arSession;
 
     public void GoToOtherDimension()
@@ -19,5 +20,6 @@ public class PortalGrab : MonoBehaviour
             SceneManager.LoadScene("VR", LoadSceneMode.Single);
         }
 
+        contadorPortales++;
     }
 }

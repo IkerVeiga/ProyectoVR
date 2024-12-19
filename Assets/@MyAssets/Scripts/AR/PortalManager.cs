@@ -5,10 +5,11 @@ using System.Collections;
 
 public class PortalManager : MonoBehaviour
 {
+
     private List<GameObject> portals = new List<GameObject>();
     [SerializeField] private WallManager wallManager;
 
-    [SerializeField] private GameObject portalPrefab;
+    public List<GameObject> portalPrefabs;
     [SerializeField] private float offset;
     [SerializeField] private float buffer;
 
@@ -20,16 +21,17 @@ public class PortalManager : MonoBehaviour
 
     private IEnumerator SpawnCoroutine()
     {
-        while(true)
+        
+        while (true)
         {
+            int randomPortal = Random.Range(0, portalPrefabs.Count - 1);
             yield return new WaitForSeconds(5);
-            SpawnPortal();
+            SpawnPortal(randomPortal);
         }
     }
 
-    private void SpawnPortal()
+    private void SpawnPortal(int portalIndex)
     {
-
         ARPlane randomPlane = wallManager.Walls[Random.Range(0, wallManager.Walls.Count)];
         float height = Random.Range(-(randomPlane.extents.y - buffer), randomPlane.extents.y - buffer);
 
@@ -40,7 +42,7 @@ public class PortalManager : MonoBehaviour
         position += rotatedNormal * Random.Range(-(randomPlane.extents.x - buffer), randomPlane.extents.x - buffer);
 
         position += randomPlane.normal * offset;
-        GameObject instance = Instantiate(portalPrefab, position, rotation);
+        GameObject instance = Instantiate(portalPrefabs[portalIndex], position, rotation);
         portals.Add(instance);
         Debug.Log("Portal spawned");
     }
