@@ -8,6 +8,8 @@ public class SpawnByPortalType : MonoBehaviour
     private string portal;
 
     [SerializeField] private Transform villageSpawn;
+    [SerializeField] private Transform mazeSpawn;
+    [SerializeField] private Transform houseSpawn;
     [SerializeField] private Transform xrOrigin;
     [SerializeField] private GameObject debugPanel;
 
@@ -20,6 +22,14 @@ public class SpawnByPortalType : MonoBehaviour
         if (portal == "6")
         {
             xrOrigin.position = villageSpawn.position;
+        }
+        else if (portal == "7")
+        {
+            xrOrigin.position = mazeSpawn.position;
+        }
+        else
+        {
+            xrOrigin.position = houseSpawn.position;
         }
     }
 
