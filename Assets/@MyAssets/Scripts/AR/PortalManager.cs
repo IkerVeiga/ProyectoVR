@@ -24,8 +24,8 @@ public class PortalManager : MonoBehaviour
         
         while (true)
         {
-            int randomPortal = Random.Range(0, portalPrefabs.Count - 1);
             yield return new WaitForSeconds(5);
+            int randomPortal = Random.Range(0, portalPrefabs.Count - 1);
             SpawnPortal(randomPortal);
         }
     }
