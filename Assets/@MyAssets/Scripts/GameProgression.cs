@@ -18,14 +18,14 @@ public class GameProgression : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PortalGrab.contadorPortales == 2)
+        if(PortalGrab.contadorPortales == 1)
         {
-            portalManager.portalPrefabs.Add(portalMaze);
+            portalManager.portalPrefabs.Insert(0, portalMaze);
         } 
-        else if(PortalGrab.contadorPortales == 3)
+        else if(PortalGrab.contadorPortales == 2)
         {
 
-            portalManager.portalPrefabs.Add(portalHouse);
+            portalManager.portalPrefabs.Insert(0, portalHouse);
         }
     }
 }

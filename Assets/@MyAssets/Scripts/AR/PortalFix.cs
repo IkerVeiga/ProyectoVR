@@ -8,6 +8,8 @@ public class PortalFix : MonoBehaviour
     [SerializeField] private float focusTime;
     private float timer;
 
+    public Transform portalTransform;
+
     public float rayTargeted()
     {
         Debug.Log("Raycasted");
@@ -16,7 +18,6 @@ public class PortalFix : MonoBehaviour
         {
             realPortal.SetActive(true);
             gameObject.SetActive(false);
-            realPortal.GetComponent<AudioSource>().Play();
         }
         return timer / focusTime;
     }

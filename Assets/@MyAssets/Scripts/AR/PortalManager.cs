@@ -41,7 +41,7 @@ public class PortalManager : MonoBehaviour
         position += rotatedNormal * Random.Range(-(randomPlane.extents.x - buffer), randomPlane.extents.x - buffer);
 
         position += randomPlane.normal * offset;
-        GameObject instance = Instantiate(portalPrefabs[Random.Range(0, portalPrefabs.Count)], position, rotation);
+        GameObject instance = Instantiate(portalPrefabs[0], position, rotation);
         portals.Add(instance);
         Debug.Log("Portal spawned");
     }
