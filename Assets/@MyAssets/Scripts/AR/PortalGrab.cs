@@ -17,9 +17,9 @@ public class PortalGrab : MonoBehaviour
 
     IEnumerator GoToOtherDimension()
     {
-        yield return new WaitForSeconds(0.5f);
         XRGeneralSettings.Instance.Manager.StopSubsystems();
         XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+
         string dataToKeep = this.gameObject.layer.ToString();
         StaticData.valueToKeep = dataToKeep;
         contadorPortales++;

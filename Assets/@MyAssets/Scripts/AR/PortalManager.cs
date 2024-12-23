@@ -25,12 +25,11 @@ public class PortalManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(5);
-            int randomPortal = Random.Range(0, portalPrefabs.Count - 1);
-            SpawnPortal(randomPortal);
+            SpawnPortal();
         }
     }
 
-    private void SpawnPortal(int portalIndex)
+    private void SpawnPortal()
     {
         ARPlane randomPlane = wallManager.Walls[Random.Range(0, wallManager.Walls.Count)];
         float height = Random.Range(-(randomPlane.extents.y - buffer), randomPlane.extents.y - buffer);
@@ -42,7 +41,7 @@ public class PortalManager : MonoBehaviour
         position += rotatedNormal * Random.Range(-(randomPlane.extents.x - buffer), randomPlane.extents.x - buffer);
 
         position += randomPlane.normal * offset;
-        GameObject instance = Instantiate(portalPrefabs[portalIndex], position, rotation);
+        GameObject instance = Instantiate(portalPrefabs[Random.Range(0, portalPrefabs.Count)], position, rotation);
         portals.Add(instance);
         Debug.Log("Portal spawned");
     }
