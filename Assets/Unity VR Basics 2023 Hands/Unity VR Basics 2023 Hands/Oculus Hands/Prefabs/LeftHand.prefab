@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04877f4fdc0ff914c9a2b503f061b633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 100
+  maxTime: 100000
   tmp: {fileID: 2270346843368075073}
 --- !u!4 &5229200386471474880 stripped
 Transform:
