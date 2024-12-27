@@ -2,27 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class MirrorCameraOptimization : MonoBehaviour
 {
 
-    [SerializeField] private List<GameObject> mirrors;
-    private Plane[] cameraFrustrumPlanes;
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        cameraFrustrumPlanes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
-        mirrors.ForEach(mirror =>
+        
+        if (other.tag == "MainCamera")
         {
-            if (GeometryUtility.TestPlanesAABB(cameraFrustrumPlanes, mirror.GetComponent<Renderer>().bounds))
-            {
-                mirror.transform.GetChild(0).gameObject.SetActive(true);
-            }
-            else
-            {
-                mirror.transform.GetChild(0).gameObject.SetActive(false);
-            }
-        });
+            Debug.Log("Camera Entered");
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "MainCamera")
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 }
