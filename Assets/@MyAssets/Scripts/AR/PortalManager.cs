@@ -2,12 +2,17 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PortalManager : MonoBehaviour
 {
+    public static PortalManager instance { get; private set; }
 
-    private List<GameObject> portals = new List<GameObject>();
+    public List<GameObject> portals = new List<GameObject>();
     [SerializeField] private WallManager wallManager;
+
+    [SerializeField] private TextMeshProUGUI debug;
 
     public List<GameObject> portalPrefabs;
     [SerializeField] private float offset;
@@ -19,10 +24,27 @@ public class PortalManager : MonoBehaviour
         StartCoroutine(SpawnCoroutine());
     }
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+        DontDestroyOnLoad(this.gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void Update()
+    {
+        debug.text = portals[0].ToString();
+    }
+
     private IEnumerator SpawnCoroutine()
     {
-        
-        while (true)
+        while (portals.Count <= 3)
         {
             yield return new WaitForSeconds(5);
             SpawnPortal();
@@ -42,9 +64,16 @@ public class PortalManager : MonoBehaviour
 
         position += randomPlane.normal * offset;
         GameObject instance = Instantiate(portalPrefabs[0], position, rotation);
-        portals.Add(instance);
+        //portals.Add(instance);
         Debug.Log("Portal spawned");
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        foreach(GameObject portal in portals)
+        {
+            Instantiate(portal, portal.transform.position, portal.transform.rotation);
+        }
+    }
 
 }
