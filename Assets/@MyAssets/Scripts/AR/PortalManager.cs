@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class PortalManager : MonoBehaviour
 {
-    public static PortalManager instance { get; private set; }
-
     public List<GameObject> portals = new List<GameObject>();
     [SerializeField] private WallManager wallManager;
 
@@ -26,15 +24,6 @@ public class PortalManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
-        DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void Update()

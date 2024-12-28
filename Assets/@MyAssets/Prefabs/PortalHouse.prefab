@@ -194,7 +194,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 880836618484986689}
         m_TargetAssemblyTypeName: PortalGrab, Assembly-CSharp
-        m_MethodName: CrossPortal
+        m_MethodName: GoToOtherDimension
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -404,3 +404,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   realPortal: {fileID: 5234123692291111031}
   focusTime: 2
+  raycasted: 0
+  portalTransform: {fileID: 0}

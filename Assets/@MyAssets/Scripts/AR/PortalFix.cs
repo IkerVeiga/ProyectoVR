@@ -22,7 +22,6 @@ public class PortalFix : MonoBehaviour
             realPortal.SetActive(true);
             gameObject.SetActive(false);
             raycasted = true;
-            PortalManager.instance.portals.Add(realPortal);
         }
         return timer / focusTime;
     }
