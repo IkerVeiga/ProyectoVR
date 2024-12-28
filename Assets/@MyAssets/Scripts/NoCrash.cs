@@ -14,9 +14,4 @@ public class NoCrash : MonoBehaviour
         SceneManager.LoadScene("VR", LoadSceneMode.Single);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

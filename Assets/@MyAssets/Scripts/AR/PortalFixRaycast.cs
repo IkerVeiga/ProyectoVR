@@ -16,7 +16,15 @@ public class PortalFixRaycast : MonoBehaviour
             if (target.tag == "Portal")
             {
                 slider.gameObject.SetActive(true);
-                slider.value = target.GetComponent<PortalFix>().rayTargeted();
+                PortalFix portalFix = target.GetComponent<PortalFix>();
+                if (portalFix != null)
+                {
+                    slider.value = portalFix.rayTargeted();
+                }
+                else
+                {
+                    slider.gameObject.SetActive(false);
+                }
             }
             else
             {
