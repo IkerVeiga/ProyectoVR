@@ -467,7 +467,8 @@ MonoBehaviour:
   ARportals: []
   VRportals: []
   wallManager: {fileID: 0}
-  portalPrefabs: []
+  portalPrefabs:
+  - {fileID: 2683079661128363945, guid: b279c5f08e1dec8439746a3c08fdb0d2, type: 3}
   offset: 0
   buffer: 0
 --- !u!4 &336265030
