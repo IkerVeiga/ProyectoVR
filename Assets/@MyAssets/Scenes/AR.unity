@@ -3204,7 +3204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3790,7 +3790,6 @@ GameObject:
   - component: {fileID: 1758891876}
   - component: {fileID: 1758891878}
   - component: {fileID: 1758891877}
-  - component: {fileID: 1758891879}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3858,18 +3857,6 @@ MonoBehaviour:
   - {fileID: 2683079661128363945, guid: b279c5f08e1dec8439746a3c08fdb0d2, type: 3}
   offset: 0
   buffer: 0
---- !u!114 &1758891879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758891873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f71756bd67a60c143b223cc438d59f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1995861766
 GameObject:
   m_ObjectHideFlags: 0
