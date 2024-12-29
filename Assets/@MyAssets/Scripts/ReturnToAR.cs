@@ -7,7 +7,7 @@ using UnityEngine.XR.Management;
 public class ReturnToAR : MonoBehaviour
 {
 
-    public void GoToMyDimension()
+    public void OnTriggerEnter(Collider other)
     {
         SceneManager.LoadScene("AR");
     }

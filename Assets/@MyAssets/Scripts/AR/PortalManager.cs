@@ -47,7 +47,7 @@ public class PortalManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
@@ -59,6 +59,9 @@ public class PortalManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
+        XRGeneralSettings.Instance.Manager.StartSubsystems();
+
         if (scene.name == "AR")
         {
             SpawnExistingPortals();
