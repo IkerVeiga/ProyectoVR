@@ -47,12 +47,12 @@ public class PortalManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); //Esto lo he cambiado desde que funcionaba el cambio de escena en las gafas
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
         
     }
@@ -66,6 +66,7 @@ public class PortalManager : MonoBehaviour
         {
             SpawnExistingPortals();
             SpawnNewPortal();
+            wallManager = FindObjectOfType<WallManager>();
         } else if (scene.name == "VR")
         {
             VRportals = FindObjectsOfType<Portal>()
@@ -74,7 +75,7 @@ public class PortalManager : MonoBehaviour
                 .ToList();
 
             GameObject origin = FindObjectOfType<XROrigin>().gameObject;
-            origin.transform.position = VRportals[traversedPortalIndex].transform.position;
+            origin.transform.position = VRportals[traversedPortalIndex].transform.GetChild(0).position;
         }
     }
 
