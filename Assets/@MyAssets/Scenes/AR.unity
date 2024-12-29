@@ -3787,8 +3787,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1758891875}
-  - component: {fileID: 1758891876}
-  - component: {fileID: 1758891878}
   - component: {fileID: 1758891877}
   m_Layer: 0
   m_Name: GameManager
@@ -3812,19 +3810,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1758891876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758891873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa500ddc7aee0c4b89491beb5d4de58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Instance: {fileID: 0}
 --- !u!114 &1758891877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3838,25 +3823,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planeManager: {fileID: 1619959262}
---- !u!114 &1758891878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758891873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfea3821df6d39740a64f6602d543486, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ARportals: []
-  VRportals: []
-  wallManager: {fileID: 1758891877}
-  portalPrefabs:
-  - {fileID: 2683079661128363945, guid: b279c5f08e1dec8439746a3c08fdb0d2, type: 3}
-  offset: 0
-  buffer: 0
 --- !u!1 &1995861766
 GameObject:
   m_ObjectHideFlags: 0

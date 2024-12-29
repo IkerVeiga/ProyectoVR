@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 using Unity.XR.CoreUtils;
 using System;
+using UnityEngine.XR.Management;
 
 public class PortalManager : MonoBehaviour
 {
@@ -39,6 +40,9 @@ public class PortalManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
+        XRGeneralSettings.Instance.Manager.StartSubsystems();
+
         if (scene.name == "AR")
         {
             SpawnNewPortal();
