@@ -7,12 +7,31 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 using Unity.XR.CoreUtils;
 using System;
+using UnityEngine.XR.Management;
 
 public class PortalManager : MonoBehaviour
 {
+
+    private class PortalData
+    {
+        public PortalData(GameObject portal)
+        {
+            this.portal = portal;
+            this.position = portal.transform.position;
+            this.rotation = portal.transform.rotation;
+            this.index = portal.GetComponent<Portal>().Index;
+        }
+
+
+        public Vector3 position;
+        public Quaternion rotation;
+        public int index;
+        public GameObject portal;
+    }
+
     public static PortalManager Instance;
 
-    [SerializeField] private List<Transform> ARportals = new List<Transform>();
+    [SerializeField] private List<PortalData> ARportals = new List<PortalData>();
     [SerializeField] private List<GameObject> VRportals = new List<GameObject>();
     [SerializeField] private WallManager wallManager;
 
@@ -21,6 +40,7 @@ public class PortalManager : MonoBehaviour
     [SerializeField] private float buffer;
 
     private int traversedPortalIndex = 0;
+    
 
     private void Awake()
     {
@@ -41,6 +61,7 @@ public class PortalManager : MonoBehaviour
     {
         if (scene.name == "AR")
         {
+            SpawnExistingPortals();
             SpawnNewPortal();
         } else if (scene.name == "VR")
         {
@@ -54,10 +75,23 @@ public class PortalManager : MonoBehaviour
         }
     }
 
+    private void SpawnExistingPortals()
+    {
+        foreach (PortalData data in ARportals)
+        {
+            GameObject instance = Instantiate(portalPrefabs[0], data.position, data.rotation);
+            GameObject realPortal = instance.transform.GetChild(1).gameObject;
+            realPortal.SetActive(true);
+            realPortal.GetComponent<Portal>().Index = data.index;
+            instance.transform.GetChild(0).gameObject.SetActive(false);
+            data.portal = realPortal;
+        }
+    }
+
     private void SpawnNewPortal()
     {
         Quaternion rotation = Quaternion.identity;
-        Vector3 position = Vector3.zero;
+        Vector3 position = new Vector3(0, 0, ARportals.Count);
 
         try
         {
@@ -81,7 +115,7 @@ public class PortalManager : MonoBehaviour
         realPortal.SetActive(true);
         realPortal.GetComponent<Portal>().Index = ARportals.Count;
         realPortal.SetActive(false);
-        ARportals.Add(instance.transform);
+        ARportals.Add(new PortalData(realPortal));
         Debug.Log("Portal spawned");
     }
 
