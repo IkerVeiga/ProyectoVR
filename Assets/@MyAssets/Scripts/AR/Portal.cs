@@ -17,4 +17,12 @@ public class Portal : MonoBehaviour
         PortalManager.Instance.GoToOtherDimension(index);
 
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GoToOtherDimension();
+        }
+    }
 }
