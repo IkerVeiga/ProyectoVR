@@ -8,6 +8,7 @@ using System.Linq;
 using Unity.XR.CoreUtils;
 using System;
 using UnityEngine.XR.Management;
+using UnityEngine.XR.ARSubsystems;
 
 public class PortalManager : MonoBehaviour
 {
@@ -65,7 +66,10 @@ public class PortalManager : MonoBehaviour
         if (scene.name == "AR")
         {
             SpawnExistingPortals();
-            SpawnNewPortal();
+            if(ARportals.Count <= 3)
+            {
+                SpawnNewPortal();
+            }
             wallManager = FindObjectOfType<WallManager>();
         } else if (scene.name == "VR")
         {
