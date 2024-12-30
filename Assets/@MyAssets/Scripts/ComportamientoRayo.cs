@@ -125,6 +125,13 @@ public class ComportamientoRayo : MonoBehaviour
 
             // Interpolación para un movimiento suave
             objetoMover.position = Vector3.Lerp(objetoMover.position, posicionObjetivo, Time.deltaTime * velocidadTransicion);
+
+            // Comprobar si estamos suficientemente cerca del objetivo
+            if (Vector3.Distance(objetoMover.position, posicionObjetivo) < 0.01f)
+            {
+                // Forzar la posición exacta para evitar overshooting
+                objetoMover.position = posicionObjetivo;
+            }
         }
     }
 }
