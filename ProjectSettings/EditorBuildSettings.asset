@@ -15,6 +15,5 @@ EditorBuildSettings:
     path: Assets/@MyAssets/Scenes/VR.unity
     guid: 84615191a62b6ff49b00930f48860ab4
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 05ea6e04c627e8b4d81082287e35597c, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: b1543e5d26f520b4fa4c5c88b82bbbde, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: ff831bb481120b84586f9079d9ee0f5c, type: 2}

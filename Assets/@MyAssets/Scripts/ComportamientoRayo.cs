@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class ComportamientoRayo : MonoBehaviour
 {
-    public int maxRebotes = 5; 
-    public float rayoDistancia = 100f; 
-    public LineRenderer lineRenderer; 
-    public Material material; 
+    public int maxRebotes = 5; // Máximo de rebotes del rayo
+    public float rayoDistancia = 100f; // Distancia máxima del rayo
+    public LineRenderer lineRenderer; // Componente para visualizar el rayo
+    public Material material; // Material para cambiar el color del rayo
 
-    public Transform objetoMover; 
-    public Vector3 posicionInicialObjeto; 
-    public float nuevaPosicionY; 
-    public float velocidadTransicion; 
+    public Transform objetoMover; // Objeto que se moverá
+    public Vector3 posicionInicialObjeto; // Posición inicial del objeto
+    public float nuevaPosicionY; // Nueva posición Y del objeto cuando choca con "Final"
+    public float velocidadTransicion; // Velocidad de la transición de movimiento
 
-    private bool haChocadoConFinal = false; 
+    private bool haChocadoConFinal = false; // Estado del rayo
 
     void Start()
     {
@@ -23,14 +23,14 @@ public class ComportamientoRayo : MonoBehaviour
             lineRenderer = GetComponent<LineRenderer>();
         }
 
-
+        // Ancho constante del rayo
         lineRenderer.startWidth = 0.05f;
         lineRenderer.endWidth = 0.05f;
 
-
+        // Opcional: Configurar curva de ancho
         AnimationCurve curve = new AnimationCurve();
-        curve.AddKey(0f, 0.05f); 
-        curve.AddKey(1f, 0.1f); 
+        curve.AddKey(0f, 0.05f); // Inicio del rayo
+        curve.AddKey(1f, 0.1f); // Final del rayo
         lineRenderer.widthCurve = curve;
 
         // Guardar la posición inicial del objeto
