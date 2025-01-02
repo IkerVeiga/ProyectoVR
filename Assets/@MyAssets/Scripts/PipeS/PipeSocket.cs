@@ -15,12 +15,17 @@ public class PipeSocket : MonoBehaviour
     [SerializeField] private float waitTime = 0.01f;
     [SerializeField] SourcePipe source;
     private GrabablePipe pipe;
-    private int steps;
+    [SerializeField] private int steps;
     private bool isRotating = false;
+
+    public void Start()
+    {
+        steps = (int) transform.rotation.y / 90;
+    }
 
     public void Rotate()
     {
-        if (isRotating) return;
+        if (isRotating || pipe == null) return;
         isRotating = true;
         StartCoroutine(RotateCoroutine());
 
@@ -90,6 +95,7 @@ public class PipeSocket : MonoBehaviour
         {
             source.ConnectAsSource();
         }
+        pipe = null;
     }
 
     public int SnapRotation(float rotation)
