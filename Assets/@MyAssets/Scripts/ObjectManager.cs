@@ -66,4 +66,17 @@ public class ObjectManager : MonoBehaviour
         return false;
     }
 
+    public void ChangeObject(GameObject go)
+    {
+        if(VRObjects.ContainsValue(go))
+        {
+            VRObjects.Remove(go.name);
+            ARObjects.TryAdd(go.name, go);
+        } else if (ARObjects.ContainsValue(go))
+        {
+            ARObjects.Remove(go.name);
+            VRObjects.TryAdd(go.name, go);
+        }
+    }
+
 }

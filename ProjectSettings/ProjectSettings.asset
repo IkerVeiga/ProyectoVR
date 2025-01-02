@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: TheCommittee
-  productName: ProyectoVR2
+  productName: Out A Dimension
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -140,10 +140,7 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: 789837464629598026, guid: 28059a034aaccb84db619e5c514d6810, type: 2}
-  - {fileID: 11400000, guid: b1543e5d26f520b4fa4c5c88b82bbbde, type: 2}
-  - {fileID: -3553157092164273925, guid: ff831bb481120b84586f9079d9ee0f5c, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -164,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.TheCommittee.ProyectoVR2
+    Android: com.TheCommittee.OutADimension
     Standalone: com.TheCommittee.ProyectoVideojuegoVR
   buildNumber:
     Standalone: 0
