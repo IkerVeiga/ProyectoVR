@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pipe : MonoBehaviour
 {
     [SerializeField] private List<Pipe> connectedPipes = new List<Pipe>();
-    private bool isConnected;
+    protected bool isConnected;
 
     public List<Pipe> ConnectedPipes { get => connectedPipes; }
 
