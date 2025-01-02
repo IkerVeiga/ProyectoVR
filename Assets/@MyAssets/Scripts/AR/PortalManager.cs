@@ -65,7 +65,7 @@ public class PortalManager : MonoBehaviour
         if (scene.name == "AR")
         {
             SpawnExistingPortals();
-            SpawnNewPortal();
+            StartCoroutine(SpawnNewPortal());
             wallManager = FindObjectOfType<WallManager>();
         } else if (scene.name == "VR")
         {
@@ -92,8 +92,9 @@ public class PortalManager : MonoBehaviour
         }
     }
 
-    private void SpawnNewPortal()
+    private IEnumerator SpawnNewPortal()
     {
+        yield return new WaitForSeconds(3);
         Quaternion rotation = Quaternion.identity;
         Vector3 position = new Vector3(0, 0, ARportals.Count);
 
@@ -125,6 +126,7 @@ public class PortalManager : MonoBehaviour
 
     public void GoToOtherDimension(int portalIndex)
     {
+        
         traversedPortalIndex = portalIndex;
 
         if (SceneManager.GetActiveScene().name == "AR")

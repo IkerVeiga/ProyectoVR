@@ -9,11 +9,18 @@ public class Portal : MonoBehaviour
 {
     [SerializeField] private int index;
 
+    private AudioSource audioSource;
+
     public int Index { get => index; set => index = value; }
+
+    private void Start()
+    {
+        audioSource = this.GetComponent<AudioSource>();
+    }
 
     public void GoToOtherDimension()
     {
-
+        audioSource.Play();
         PortalManager.Instance.GoToOtherDimension(index);
 
     }
