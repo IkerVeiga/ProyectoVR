@@ -43,7 +43,7 @@ public class ComportamientoRayo : MonoBehaviour
     void Update()
     {
         DibujarRayo();
-        MoverObjeto();
+        //MoverObjeto();
     }
 
     void DibujarRayo()
@@ -66,6 +66,7 @@ public class ComportamientoRayo : MonoBehaviour
                 if (hit.collider.CompareTag("Final"))
                 {
                     haChocadoConFinal = true;
+                    StartCoroutine(MoverCorroutine());
                     break; // No necesitamos seguir rebotando
                 }
                 else if (hit.collider.CompareTag("Espejo"))
@@ -106,32 +107,41 @@ public class ComportamientoRayo : MonoBehaviour
         lineRenderer.material = material; // Actualizar el material del LineRenderer
     }
 
-    void MoverObjeto()
+    private IEnumerator MoverCorroutine()
     {
-        if (objetoMover != null)
+        while (objetoMover.position.y > nuevaPosicionY)
         {
-            Vector3 posicionObjetivo;
-
-            if (haChocadoConFinal)
-            {
-                // Nueva posición en Y si choca con "Final"
-                posicionObjetivo = new Vector3(objetoMover.position.x, nuevaPosicionY, objetoMover.position.z);
-            }
-            else
-            {
-                // Volver a la posición inicial si no hay colisión
-                posicionObjetivo = posicionInicialObjeto;
-            }
-
-            // Interpolación para un movimiento suave
-            objetoMover.position = Vector3.Lerp(objetoMover.position, posicionObjetivo, Time.deltaTime * velocidadTransicion);
-
-            // Comprobar si estamos suficientemente cerca del objetivo
-            if (Vector3.Distance(objetoMover.position, posicionObjetivo) < 0.01f)
-            {
-                // Forzar la posición exacta para evitar overshooting
-                objetoMover.position = posicionObjetivo;
-            }
+            objetoMover.position = objetoMover.position - new Vector3(0, velocidadTransicion * Time.deltaTime, 0);
+            yield return new WaitForEndOfFrame();
         }
     }
+
+    //void MoverObjeto()
+    //{
+    //    if (objetoMover != null)
+    //    {
+    //        Vector3 posicionObjetivo;
+
+    //        if (haChocadoConFinal)
+    //        {
+    //            // Nueva posición en Y si choca con "Final"
+    //            posicionObjetivo = new Vector3(objetoMover.position.x, nuevaPosicionY, objetoMover.position.z);
+    //        }
+    //        else
+    //        {
+    //            // Volver a la posición inicial si no hay colisión
+    //            posicionObjetivo = posicionInicialObjeto;
+    //        }
+
+    //        // Interpolación para un movimiento suave
+    //        objetoMover.position = objetoMover.position - new Vector3(0, velocidadTransicion * Time.deltaTime, 0);
+
+    //        // Comprobar si estamos suficientemente cerca del objetivo
+    //        if (Vector3.Distance(objetoMover.position, posicionObjetivo) < 0.01f)
+    //        {
+    //            // Forzar la posición exacta para evitar overshooting
+    //            objetoMover.position = posicionObjetivo;
+    //        }
+    //    }
+    //}
 }
