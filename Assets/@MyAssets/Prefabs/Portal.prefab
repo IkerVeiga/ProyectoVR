@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942153092954407965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Portal
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2683079661128363945}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4651451, y: 0.05000024, z: 1.4073331}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &8121131318208379056
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +282,7 @@ GameObject:
   - component: {fileID: 7502685076684447148}
   - component: {fileID: 8180679713217992560}
   - component: {fileID: 4087319768511505130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MaskedPortal
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -404,3 +405,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   realPortal: {fileID: 5234123692291111031}
   focusTime: 2
+  raycasted: 0
+  portalTransform: {fileID: 0}

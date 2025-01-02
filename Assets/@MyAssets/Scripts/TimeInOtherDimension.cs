@@ -8,11 +8,10 @@ using UnityEngine.XR.Management;
 public class TimeInOtherDimension : MonoBehaviour
 {
     [SerializeField] private float maxTime; //en segundos
-
-    private GameObject xrOrigin;
+    [SerializeField] private TextMeshProUGUI tmp;
 
     private float chrono = 0;
-    private string timeText;
+    public string timeText { get; set; }
     private int minutes;
     private int seconds;
 
@@ -20,8 +19,7 @@ public class TimeInOtherDimension : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        xrOrigin = GameObject.Find("XR Origin (XR Rig)");
-        watchBeep = xrOrigin.GetComponent<AudioSource>();
+        watchBeep = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,7 +45,7 @@ public class TimeInOtherDimension : MonoBehaviour
         }
         timeText = minutes + ":" + secondsString;
 
-        if (minutes == 0 && seconds == 11)
+        if (minutes == 0 && seconds == 11) //Esto igual pasar al reloj
         {
             Debug.Log(watchBeep);
             watchBeep.Play();
@@ -55,14 +53,13 @@ public class TimeInOtherDimension : MonoBehaviour
 
         if (minutes == 0 && seconds <= 10 && (seconds % 2) == 0 )
         {
-            xrOrigin.GetComponentInChildren<TextMeshProUGUI>().color = Color.red;
+            tmp.color = Color.red;
         }
         else
         {
-            xrOrigin.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+            tmp.color = Color.white;
         }
-
-        xrOrigin.GetComponentInChildren<TextMeshProUGUI>().text = timeText;
+        tmp.text = timeText;
 
     }
 
