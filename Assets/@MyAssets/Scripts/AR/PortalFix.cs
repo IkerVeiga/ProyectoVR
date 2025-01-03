@@ -8,10 +8,7 @@ public class PortalFix : MonoBehaviour
     [SerializeField] private float focusTime;
     private float timer;
     public bool raycasted = false;
-
-    public Transform portalTransform;
-
-    
+   
 
     public float rayTargeted()
     {

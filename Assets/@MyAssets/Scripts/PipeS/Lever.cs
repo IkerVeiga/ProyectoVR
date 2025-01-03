@@ -29,9 +29,4 @@ public class Lever : Pipe
             yield return new WaitForSeconds(waitTime);
         }
     }
-
-    protected override void EventConfiguration()
-    {
-
-    }
 }

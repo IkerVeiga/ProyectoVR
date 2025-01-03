@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VRportals: []
-  wallManager: {fileID: 0}
+  wallManager: {fileID: 1758891877}
   portalPrefabs:
   - {fileID: 2683079661128363945, guid: b279c5f08e1dec8439746a3c08fdb0d2, type: 3}
   offset: 0
