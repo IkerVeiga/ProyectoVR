@@ -25,8 +25,6 @@ public class ObjectManager : MonoBehaviour
         {
             Destroy(this);
         }
-
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)

@@ -7,7 +7,8 @@ public class PortalFix : MonoBehaviour
     [SerializeField] private GameObject realPortal;
     [SerializeField] private float focusTime;
     private float timer;
-    public bool raycasted = false;    
+    public bool raycasted = false;
+   
 
     public float rayTargeted()
     {

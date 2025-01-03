@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &8121131318208379056
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +281,7 @@ GameObject:
   - component: {fileID: 7265319203752322581}
   - component: {fileID: 7502685076684447148}
   - component: {fileID: 8180679713217992560}
-  - component: {fileID: 4087319768511505130}
+  - component: {fileID: 2017048721325960111}
   m_Layer: 6
   m_Name: MaskedPortal
   m_TagString: Portal
@@ -385,11 +386,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8121131318208379056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e09338576b7154ebb0e23f5b79c7ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
---- !u!114 &4087319768511505130
+--- !u!114 &2017048721325960111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -398,7 +399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8121131318208379056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3cea12f867c234f8fcb2e4f0cd4e77, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ff801a2d03977d40b7055564d9ed544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   realPortal: {fileID: 5234123692291111031}

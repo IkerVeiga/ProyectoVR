@@ -475,7 +475,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 336265028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3390508b7fb711e4585639f1cff87ea6, type: 3}
+  m_Script: {fileID: 11500000, guid: bfea3821df6d39740a64f6602d543486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   VRportals: []
@@ -4078,10 +4078,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1624111268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 097b423abd8d15d4d92d3a075b6ddcc2, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b47cfda249c5c4d8577ff69c327cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastOrigin: {fileID: 1143028495}
+  raycastOrigin: {fileID: 1624111268}
   slider: {fileID: 2001202738}
 --- !u!114 &1624111273
 MonoBehaviour:
@@ -4212,7 +4212,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1758891873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad7b423bb378bb488b8d0f7a6b436a9, type: 3}
+  m_Script: {fileID: 11500000, guid: ca216de3aa8ca4843946563dcc4bb887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   planeManager: {fileID: 1619959262}
