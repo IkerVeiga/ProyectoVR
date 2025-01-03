@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - AR
-  - Portal
-  - Espejo
-  - Final
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,8 +11,6 @@ TagManager:
   - 
   - Water
   - UI
-  - Village
-  - Maze
   - 
   - 
   - 
@@ -39,7 +33,9 @@ TagManager:
   - 
   - 
   - 
-  - XR Simulation
+  - 
+  - 
+  - 
   - 
   m_SortingLayers:
   - name: Default
