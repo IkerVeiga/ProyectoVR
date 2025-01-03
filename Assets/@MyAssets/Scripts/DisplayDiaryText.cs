@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DisplayDiaryText : MonoBehaviour
 {
-    public string text;
+    [TextArea] public string text;
     public float time;
 
     // Start is called before the first frame update
