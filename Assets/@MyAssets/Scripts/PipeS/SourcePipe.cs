@@ -31,4 +31,9 @@ public class SourcePipe : Pipe
             ConnectAsSource();
         }
     }
+
+    protected override void EventConfiguration()
+    {
+
+    }
 }
