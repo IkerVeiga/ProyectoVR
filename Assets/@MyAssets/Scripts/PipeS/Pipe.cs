@@ -29,7 +29,7 @@ public class Pipe : MonoBehaviour
         {
             renderer.material.color = Color.white;
         }
-        else //Igual luego quitar este if
+        else
         {
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
