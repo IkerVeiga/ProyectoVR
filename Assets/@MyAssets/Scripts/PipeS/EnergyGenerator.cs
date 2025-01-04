@@ -21,4 +21,5 @@ public class EnergyGenerator : MonoBehaviour
             GetComponent<Pipe>().ConnectToCircuit();
         }
     }
+
 }
