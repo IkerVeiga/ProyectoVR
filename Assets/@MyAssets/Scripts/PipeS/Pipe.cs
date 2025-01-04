@@ -12,8 +12,8 @@ public class Pipe : MonoBehaviour
     public List<Pipe> ConnectedPipes { get => connectedPipes; }
     public Material Electricity { get => electricity; set => electricity = value; }
 
-    private event Action connectEvent;
-    private event Action disconnectEvent; //Sí, me he pasado, lo siento
+    protected event Action connectEvent;
+    protected event Action disconnectEvent; //Sí, me he pasado, lo siento
 
     private void Start()
     {
