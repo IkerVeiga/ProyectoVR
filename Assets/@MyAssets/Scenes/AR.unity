@@ -224,7 +224,7 @@ Transform:
   m_GameObject: {fileID: 41064604}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.951, y: 0.786, z: 0.214}
+  m_LocalPosition: {x: 0.955, y: 0.786, z: 0.177}
   m_LocalScale: {x: 0.40575057, y: 0.0002, z: 0.26957285}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 336265030}
   - component: {fileID: 336265029}
   - component: {fileID: 336265031}
+  - component: {fileID: 336265032}
   m_Layer: 0
   m_Name: PersistentGameManager
   m_TagString: Untagged
@@ -516,6 +517,20 @@ MonoBehaviour:
   ARObjects:
     _serializedList: []
   ObjectsInCrate: []
+--- !u!114 &336265032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336265028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
 --- !u!1 &359133448
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,13 +623,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nLa segunda vez que entr\xE9 por el portal consegu\xED volver por mi
-    mismo. Es decir, parece que hay una especie de tiempo l\xEDmite cuando cruzas
-    el portal, y si lo excedes volver\xE1s automatic\xE1mente a donde estabas.\n\nAdem\xE1s,
-    parece que van apareciendo m\xE1s portales, aunque no entiendo el patr\xF3n.\n\nLa
-    piedra que encontr\xE9 est\xE1 en mi casa, no quiero que nadie m\xE1s aparte
-    de ti sepa de esto.\n\nQuiero que investigues sobre todo esto, conf\xEDo en ti
-    Aylin.\n\nTu jefe"
+  m_text: "\nPuede que necesite transaladar objetos entre las dimensiones. Para eso,
+    deposite los objetos que quiera transladar en la caja de translaci\xF3n situada
+    en el suelo. Cuando cambie de dimensi\xF3n, la caja y su contenido se transladar\xE1n
+    con usted.\n\nNuestras mediciones indican que la integridad estructural del campo
+    de realidad cercana a esta sala se degrada con el tiempo, as\xED que es posible
+    que aparezcan m\xE1s anomal\xEDas con diferentes destinos en la dimensi\xF3n
+    paralela con el tiempo.\n\nBuena suerte, agente, el destino de esta realidad
+    depende de usted.\n\nAEGIS"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1540,7 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1039153010}
+  m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -1838,8 +1854,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5017698, z: 0.5}
-  m_Center: {x: 0, y: 0.22377737, z: 0}
+  m_Size: {x: 0.5, y: 0.41032785, z: 0.5}
+  m_Center: {x: 0, y: -0.021013945, z: 0}
 --- !u!4 &1005120709
 Transform:
   m_ObjectHideFlags: 0
@@ -1849,7 +1865,7 @@ Transform:
   m_GameObject: {fileID: 1005120706}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.158, y: 0, z: -1.247}
+  m_LocalPosition: {x: 0.158, y: 0.324, z: -1.247}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1865,7 +1881,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1039153011}
-  - component: {fileID: 1039153010}
   m_Layer: 0
   m_Name: XR Interaction Manager
   m_TagString: Untagged
@@ -1873,20 +1888,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1039153010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039153009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
 --- !u!4 &1039153011
 Transform:
   m_ObjectHideFlags: 0
@@ -3213,15 +3214,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nBuenos d\xEDas Aylin. Hoy no puedo ir a trabajar, me ha surgido un contratiempo,
-    pero quiero que trabajes en algo.\n\nAyer encontr\xE9 en el almac\xE9n de la
-    empresa una tablet antigua. La puse a cargar para ver si funcionaba. Y cuando
-    la encend\xED vi lo que parec\xEDan una especie de portales que no pod\xEDan
-    verse a simple vista.\n\nYa sabes lo curioso que soy, as\xED que cruc\xE9 el
-    portal. No se muy bien a d\xF3nde me llev\xF3. Me qued\xE9 para ver si pod\xEDa
-    descubrir algo, pero despu\xE9s de un rato volv\xED autom\xE1ticamente a la oficina.\n\nDespu\xE9s
-    volv\xED a entrar en el portal, y consegu\xED coger una piedra y tra\xE9rmela
-    a la oficina para investigarla.\n"
+  m_text: "\nBueos d\xEDas, agente:\n\nSe han detectado unas anomalias espaciotemporales
+    en la sala en la que se encuentra. En esta mesa encontrar\xE1 el dispositivo
+    de detecci\xF3n que le ayudar\xE1 a encontrarlas.\n\nLos estudios preliminares
+    indican que las anomal\xEDas conectan con una dimensi\xF3n paralela. Su minisi\xF3n
+    consiste en atravesar las anomal\xEDas y recabar informaci\xF3n sobre esta dimensi\xF3n.
+    Interact\xFAe con las anomalias encontradas para atravesarlas.\n\nComo sabe,
+    los viajes interdimensionales son inestables y muy peligrosos, es por eso que
+    contar\xE1 con un tiempo limitado en esa dimensi\xF3n. Si el tiempo llega a 0
+    le traeremos de vuelta inmediatamente."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3326,7 +3327,7 @@ Transform:
   m_GameObject: {fileID: 1339228934}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
   m_LocalScale: {x: 0.5, y: 0.05, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3457,7 +3458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3757,7 +3758,7 @@ Transform:
   m_GameObject: {fileID: 1497049432}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.969, y: 0.7795, z: 0.228}
+  m_LocalPosition: {x: 1.013, y: 0.7795, z: 0.228}
   m_LocalScale: {x: 0.40575057, y: 0.0002, z: 0.26957285}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4232,7 +4233,7 @@ Transform:
   m_GameObject: {fileID: 1624111268}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.961, y: 0.78, z: -0.206}
+  m_LocalPosition: {x: 0.961, y: 0.78, z: -0.241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

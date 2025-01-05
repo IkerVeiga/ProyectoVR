@@ -12,7 +12,7 @@ public class PortalFix : MonoBehaviour
 
     public float rayTargeted()
     {
-        Debug.Log("Raycasted");
+        //Debug.Log("Raycasted");
         timer += Time.deltaTime;
         if (timer >= focusTime)
         {

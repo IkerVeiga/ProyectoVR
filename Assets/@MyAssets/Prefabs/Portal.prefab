@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942153092954407965}
+  - component: {fileID: 1267238642765413919}
   m_Layer: 6
   m_Name: Portal
   m_TagString: Portal
@@ -33,6 +34,19 @@ Transform:
   - {fileID: 5594570275460307818}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267238642765413919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2683079661128363945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &5234123692291111031
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +60,6 @@ GameObject:
   - component: {fileID: 3679344201520687886}
   - component: {fileID: 1877779843318010688}
   - component: {fileID: 8440774359809743379}
-  - component: {fileID: 880836618484986689}
   m_Layer: 6
   m_Name: Plane
   m_TagString: Portal
@@ -192,8 +205,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 880836618484986689}
-        m_TargetAssemblyTypeName: PortalGrab, Assembly-CSharp
+      - m_Target: {fileID: 1267238642765413919}
+        m_TargetAssemblyTypeName: Portal, Assembly-CSharp
         m_MethodName: GoToOtherDimension
         m_Mode: 1
         m_Arguments:
@@ -255,19 +268,6 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &880836618484986689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5234123692291111031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
 --- !u!1 &8121131318208379056
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +280,6 @@ GameObject:
   - component: {fileID: 3425288202086610305}
   - component: {fileID: 7265319203752322581}
   - component: {fileID: 7502685076684447148}
-  - component: {fileID: 8180679713217992560}
   - component: {fileID: 2017048721325960111}
   m_Layer: 6
   m_Name: MaskedPortal
@@ -377,19 +376,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: -17.02, z: -0.00000008940697}
---- !u!114 &8180679713217992560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8121131318208379056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
 --- !u!114 &2017048721325960111
 MonoBehaviour:
   m_ObjectHideFlags: 0

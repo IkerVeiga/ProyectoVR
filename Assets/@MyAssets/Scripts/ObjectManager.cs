@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using AYellowpaper.SerializedCollections;
 using UnityEngine.XR.Interaction.Toolkit;
+using System.Linq;
 
 public class ObjectManager : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class ObjectManager : MonoBehaviour
 
     public bool RegisterObject(GameObject gameObject)
     {
+        if (ObjectsInCrate.Select(go => go.name).Contains(gameObject.name)) return false;
         if (SceneManager.GetActiveScene().name == "AR")
         {
             return ARObjects.TryAdd(gameObject.name, gameObject);
@@ -72,6 +74,7 @@ public class ObjectManager : MonoBehaviour
 
     public void AddObjectToCrate(GameObject gameObject)
     {
+        if (ObjectsInCrate.Contains(gameObject)) return;
         ObjectsInCrate.Add(gameObject);
         ARObjects.Remove(gameObject.name);
         VRObjects.Remove(gameObject.name);
@@ -96,8 +99,8 @@ public class ObjectManager : MonoBehaviour
         foreach (var obj in ObjectsInCrate)
         {
             obj.transform.position = crate.transform.position;
-            obj.GetComponent<XRGrabInteractable>().enabled = false;
-            obj.GetComponent<XRGrabInteractable>().enabled = true;
+            //obj.GetComponent<XRGrabInteractable>().enabled = false;
+            //obj.GetComponent<XRGrabInteractable>().enabled = true;
         }
     }
 
@@ -107,8 +110,8 @@ public class ObjectManager : MonoBehaviour
         foreach (var obj in ObjectsInCrate)
         {
             obj.transform.position = crate.position;
-            obj.GetComponent<XRGrabInteractable>().enabled = false;
-            obj.GetComponent<XRGrabInteractable>().enabled = true;
+            //obj.GetComponent<XRGrabInteractable>().enabled = false;
+            //obj.GetComponent<XRGrabInteractable>().enabled = true;
         }
     }
 

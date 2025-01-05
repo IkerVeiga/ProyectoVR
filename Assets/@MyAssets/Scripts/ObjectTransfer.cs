@@ -8,13 +8,14 @@ public class ObjectTransfer : MonoBehaviour
     {
         if (other.GetComponent<StoreObject>() != null)
         {
+            //Debug.Log("Heyyy");
             ObjectManager.Instance.AddObjectToCrate(other.gameObject);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<StoreObject>() != null)
+        if (other.GetComponent<StoreObject>() != null || GetComponentInParent<StoreObject>() != null)
         {
             ObjectManager.Instance.RemoveObjectFromCrate(other.gameObject);
         }
