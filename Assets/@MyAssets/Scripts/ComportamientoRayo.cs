@@ -16,6 +16,7 @@ public class ComportamientoRayo : MonoBehaviour
 
     private bool haChocadoConFinal = false; // Estado del rayo
 
+    private AudioSource objectAudioSource;
     void Start()
     {
         if (lineRenderer == null)
@@ -38,6 +39,9 @@ public class ComportamientoRayo : MonoBehaviour
         {
             posicionInicialObjeto = objetoMover.position;
         }
+
+        objectAudioSource = objetoMover.GetComponent<AudioSource>();
+        Debug.Log("Asignando AudioSource");
     }
 
     void Update()
@@ -66,6 +70,17 @@ public class ComportamientoRayo : MonoBehaviour
                 if (hit.collider.CompareTag("Final"))
                 {
                     haChocadoConFinal = true;
+
+                    if (objectAudioSource != null)
+                    {
+                        objectAudioSource.loop = true;
+                        if (!objectAudioSource.isPlaying)
+                        {
+                            objectAudioSource.Play();
+                            Debug.Log("Reproduciendo Sonido");
+                        }
+                    }
+
                     StartCoroutine(MoverCorroutine());
                     break; // No necesitamos seguir rebotando
                 }
@@ -113,6 +128,12 @@ public class ComportamientoRayo : MonoBehaviour
         {
             objetoMover.position = objetoMover.position - new Vector3(0, velocidadTransicion * Time.deltaTime, 0);
             yield return new WaitForEndOfFrame();
+        }
+
+        if (objectAudioSource != null && objectAudioSource.isPlaying)
+        {
+            objectAudioSource.Stop();
+            Debug.Log("Parando sonido");
         }
     }
 
