@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using AYellowpaper.SerializedCollections;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ObjectManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ObjectManager : MonoBehaviour
 
     [SerializedDictionary("Name", "GameObject")] public SerializedDictionary<string, GameObject> VRObjects = new SerializedDictionary<string, GameObject>();
     [SerializedDictionary("Name", "GameObject")] public SerializedDictionary<string, GameObject> ARObjects = new SerializedDictionary<string, GameObject>();
+    [SerializeField] List<GameObject> ObjectsInCrate = new List<GameObject>();
 
     private void Awake()
     {
@@ -39,6 +41,7 @@ public class ObjectManager : MonoBehaviour
             {
                 obj.SetActive(false);
             }
+            RepositionCrateObjectsAR();
         }
         else if (scene.name == "VR")
         {
@@ -51,6 +54,7 @@ public class ObjectManager : MonoBehaviour
                 obj.SetActive(true);
             }
         }
+        
     }
 
     public bool RegisterObject(GameObject gameObject)
@@ -66,17 +70,52 @@ public class ObjectManager : MonoBehaviour
         return false;
     }
 
-    public void ChangeObject(GameObject go)
+    public void AddObjectToCrate(GameObject gameObject)
     {
-        if(VRObjects.ContainsValue(go))
+        ObjectsInCrate.Add(gameObject);
+        ARObjects.Remove(gameObject.name);
+        VRObjects.Remove(gameObject.name);
+    }
+
+    public void RemoveObjectFromCrate(GameObject gameObject)
+    {
+        ObjectsInCrate.Remove(gameObject);
+        if (SceneManager.GetActiveScene().name == "AR")
         {
-            VRObjects.Remove(go.name);
-            ARObjects.TryAdd(go.name, go);
-        } else if (ARObjects.ContainsValue(go))
+            ARObjects.Add(gameObject.name, gameObject);
+        }
+        else if (SceneManager.GetActiveScene().name == "VR")
         {
-            ARObjects.Remove(go.name);
-            VRObjects.TryAdd(go.name, go);
+            VRObjects.Add(gameObject.name, gameObject);
         }
     }
+
+    private void RepositionCrateObjectsAR()
+    {
+        GameObject crate = FindObjectOfType<ObjectTransfer>().gameObject;
+        foreach (var obj in ObjectsInCrate)
+        {
+            obj.transform.position = crate.transform.position;
+            obj.GetComponent<XRGrabInteractable>().enabled = false;
+            obj.GetComponent<XRGrabInteractable>().enabled = true;
+        }
+    }
+
+    public void RepositionCrateObjectsVR(GameObject portal) //Esto duele muchoo. (Lo llama PortalManager)
+    {
+        Transform crate = portal.transform.GetChild(3);
+        foreach (var obj in ObjectsInCrate)
+        {
+            obj.transform.position = crate.position;
+            obj.GetComponent<XRGrabInteractable>().enabled = false;
+            obj.GetComponent<XRGrabInteractable>().enabled = true;
+        }
+    }
+
+
+
+
+
+
 
 }
