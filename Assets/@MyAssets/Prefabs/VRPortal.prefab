@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 1214473340418619998}
   - component: {fileID: 2541447099416024808}
   - component: {fileID: 8074384960467914621}
-  - component: {fileID: 5104408636849268420}
   m_Layer: 0
   m_Name: VRPortal
   m_TagString: Portal
@@ -200,19 +199,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5104408636849268420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3362485671333185154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
 --- !u!1 &4455219847037748406
 GameObject:
   m_ObjectHideFlags: 0

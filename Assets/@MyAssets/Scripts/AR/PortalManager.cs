@@ -75,6 +75,7 @@ public class PortalManager : MonoBehaviour
             hasGoneToVR = false;
         } else if (scene.name == "VR")
         {
+            Debug.Log("Destination: "+traversedPortalIndex);
             VRportals = FindObjectsOfType<Portal>()
                 .OrderBy(p => p.Index)
                 .Select(p => p.gameObject)
