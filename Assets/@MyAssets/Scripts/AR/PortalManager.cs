@@ -8,6 +8,7 @@ using System.Linq;
 using Unity.XR.CoreUtils;
 using System;
 using UnityEngine.XR.Management;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PortalManager : MonoBehaviour
 {
@@ -76,6 +77,7 @@ public class PortalManager : MonoBehaviour
 
             GameObject origin = FindObjectOfType<XROrigin>().gameObject;
             origin.transform.position = VRportals[traversedPortalIndex].transform.GetChild(0).position;
+            //ObjectManager.Instance.RepositionCrateObjectsVR(VRportals[traversedPortalIndex]);
         }
     }
 
@@ -114,7 +116,7 @@ public class PortalManager : MonoBehaviour
             position += rotatedNormal * UnityEngine.Random.Range(-(randomPlane.extents.x - buffer), randomPlane.extents.x - buffer);
 
             position += randomPlane.normal * offset;
-        } catch (NullReferenceException e)
+        } catch (Exception e)
         {
             Debug.LogWarning(e.ToString());
         }
@@ -130,7 +132,8 @@ public class PortalManager : MonoBehaviour
 
     public void GoToOtherDimension(int portalIndex)
     {
-        
+
+
         traversedPortalIndex = portalIndex;
 
         if (SceneManager.GetActiveScene().name == "AR")

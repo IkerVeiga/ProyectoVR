@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/@MyAssets/Scenes/AR.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/@MyAssets/Scenes/Intermediate.unity
-    guid: 6bd84d8a6d190e443b5687c6059638d0
-  - enabled: 1
     path: Assets/@MyAssets/Scenes/VR.unity
     guid: 84615191a62b6ff49b00930f48860ab4
+  - enabled: 1
+    path: Assets/@MyAssets/Scenes/Intermediate.unity
+    guid: 6bd84d8a6d190e443b5687c6059638d0
   m_configObjects:
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: b1543e5d26f520b4fa4c5c88b82bbbde, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: ff831bb481120b84586f9079d9ee0f5c, type: 2}

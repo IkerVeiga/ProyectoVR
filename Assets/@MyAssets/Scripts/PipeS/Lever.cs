@@ -24,7 +24,7 @@ public class Lever : Pipe
         Debug.Log(leaverShaft.localRotation.eulerAngles.z);
         for (int i = 0; i < rotationAngle / increment; i++)
         {
-            Debug.Log(leaverShaft.localRotation.eulerAngles.z);
+            //Debug.Log(leaverShaft.localRotation.eulerAngles.z);
             leaverShaft.Rotate(-Vector3.forward, increment);
             yield return new WaitForSeconds(waitTime);
         }
