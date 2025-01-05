@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: TheCommittee
-  productName: Out a dimension
+  productName: Out A dimension
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
@@ -141,7 +141,6 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
   preloadedAssets:
-  - {fileID: 789837464629598026, guid: 28059a034aaccb84db619e5c514d6810, type: 2}
   - {fileID: 11400000, guid: b1543e5d26f520b4fa4c5c88b82bbbde, type: 2}
   - {fileID: -3553157092164273925, guid: ff831bb481120b84586f9079d9ee0f5c, type: 2}
   metroInputSource: 0
@@ -164,7 +163,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.TheCommittee.Outadimension
+    Android: com.TheCommittee.OutADimension
   buildNumber:
     Standalone: 0
     VisionOS: 0

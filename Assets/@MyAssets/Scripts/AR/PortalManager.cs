@@ -77,7 +77,7 @@ public class PortalManager : MonoBehaviour
 
             GameObject origin = FindObjectOfType<XROrigin>().gameObject;
             origin.transform.position = VRportals[traversedPortalIndex].transform.GetChild(0).position;
-            ObjectManager.Instance.RepositionCrateObjectsVR(VRportals[traversedPortalIndex]);
+            //ObjectManager.Instance.RepositionCrateObjectsVR(VRportals[traversedPortalIndex]);
         }
     }
 

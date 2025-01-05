@@ -41,7 +41,7 @@ public class ObjectManager : MonoBehaviour
             {
                 obj.SetActive(false);
             }
-            RepositionCrateObjectsAR();
+            //RepositionCrateObjectsAR();
         }
         else if (scene.name == "VR")
         {
