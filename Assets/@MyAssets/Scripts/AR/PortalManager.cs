@@ -77,7 +77,7 @@ public class PortalManager : MonoBehaviour
 
             GameObject origin = FindObjectOfType<XROrigin>().gameObject;
             origin.transform.position = VRportals[traversedPortalIndex].transform.GetChild(0).position;
-            //ObjectManager.Instance.RepositionCrateObjectsVR(VRportals[traversedPortalIndex]);
+            ObjectManager.Instance.RepositionCrateObjectsVR(VRportals[traversedPortalIndex]);
         }
     }
 
@@ -96,10 +96,6 @@ public class PortalManager : MonoBehaviour
 
     private IEnumerator SpawnNewPortal()
     {
-        if(ARportals.Count >= 4)
-        {
-            yield break;
-        }
         yield return new WaitForSeconds(3);
         Quaternion rotation = Quaternion.identity;
         Vector3 position = new Vector3(0, 0, ARportals.Count);
@@ -143,7 +139,6 @@ public class PortalManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "VR")
         {
             VRportals.Clear();
-            
             SceneManager.LoadScene("AR", LoadSceneMode.Single);
         }
     }
