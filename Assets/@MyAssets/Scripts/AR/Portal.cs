@@ -9,7 +9,6 @@ using UnityEngine.XR.Management;
 public class Portal : MonoBehaviour
 {
     [SerializeField] private int index;
-    [SerializeField] private bool isVisible = false;
 
     public int Index { get => index; set => index = value; }
 

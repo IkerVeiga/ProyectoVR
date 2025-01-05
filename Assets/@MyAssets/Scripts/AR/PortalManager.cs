@@ -131,7 +131,6 @@ public class PortalManager : MonoBehaviour
         GameObject realPortal = instance.transform.GetChild(1).gameObject;
         realPortal.SetActive(true);
         instance.GetComponent<Portal>().Index = ARportals.Count;
-        instance.GetComponent<Portal>();
         realPortal.SetActive(false);
         ARportals.Add(new PortalData(instance));
         Debug.Log("Portal spawned");
@@ -140,7 +139,7 @@ public class PortalManager : MonoBehaviour
     public void GoToOtherDimension(int portalIndex)
     {
 
-
+        Debug.Log("going to other dimension with portal index: " + portalIndex);
         traversedPortalIndex = portalIndex;
 
         if (SceneManager.GetActiveScene().name == "AR")
