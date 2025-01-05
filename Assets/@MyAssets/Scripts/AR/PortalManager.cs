@@ -69,7 +69,7 @@ public class PortalManager : MonoBehaviour
 
         if (scene.name == "AR")
         {
-            SpawnExistingPortals();
+            StartCoroutine(SpawnExistingPortals());
             StartCoroutine(SpawnNewPortal());
             wallManager = FindObjectOfType<WallManager>();
             hasGoneToVR = false;
@@ -88,15 +88,16 @@ public class PortalManager : MonoBehaviour
         }
     }
 
-    private void SpawnExistingPortals()
+    private IEnumerator SpawnExistingPortals()
     {
+        yield return new WaitForSeconds(0.5f);
         //Debug.Log("Number of existing portals: " + ARportals.Count);
         foreach (PortalData data in ARportals)
         {
             GameObject instance = Instantiate(portalPrefabs[0], data.position, data.rotation);
             GameObject realPortal = instance.transform.GetChild(1).gameObject;
-            realPortal.SetActive(true);
             instance.GetComponent<Portal>().Index = data.index;
+            realPortal.SetActive(true);
             instance.transform.GetChild(0).gameObject.SetActive(false);
             data.portal = realPortal;
             Debug.Log(instance.name);
@@ -130,6 +131,7 @@ public class PortalManager : MonoBehaviour
         GameObject realPortal = instance.transform.GetChild(1).gameObject;
         realPortal.SetActive(true);
         instance.GetComponent<Portal>().Index = ARportals.Count;
+        instance.GetComponent<Portal>();
         realPortal.SetActive(false);
         ARportals.Add(new PortalData(instance));
         Debug.Log("Portal spawned");
