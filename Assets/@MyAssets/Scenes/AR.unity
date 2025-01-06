@@ -623,9 +623,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nPuede que necesite transaladar objetos entre las dimensiones. Para eso,
-    deposite los objetos que quiera transladar en la caja de translaci\xF3n situada
-    en el suelo. Cuando cambie de dimensi\xF3n, la caja y su contenido se transladar\xE1n
+  m_text: "\nPuede que necesite trasaladar objetos entre las dimensiones. Para eso,
+    deposite los objetos que quiera trasladar en la caja de traslaci\xF3n situada
+    en el suelo. Cuando cambie de dimensi\xF3n, la caja y su contenido se trasladar\xE1n
     con usted.\n\nNuestras mediciones indican que la integridad estructural del campo
     de realidad cercana a esta sala se degrada con el tiempo, as\xED que es posible
     que aparezcan m\xE1s anomal\xEDas con diferentes destinos en la dimensi\xF3n
@@ -3116,12 +3116,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nBueos d\xEDas, agente:\n\nSe han detectado unas anomalias espaciotemporales
+  m_text: "\nBueos d\xEDas, agente:\n\nSe han detectado unas anomal\xEDas espaciotemporales
     en la sala en la que se encuentra. En esta mesa encontrar\xE1 el dispositivo
     de detecci\xF3n que le ayudar\xE1 a encontrarlas.\n\nLos estudios preliminares
-    indican que las anomal\xEDas conectan con una dimensi\xF3n paralela. Su minisi\xF3n
+    indican que las anomal\xEDas conectan con una dimensi\xF3n paralela. Su misi\xF3n
     consiste en atravesar las anomal\xEDas y recabar informaci\xF3n sobre esta dimensi\xF3n.
-    Interact\xFAe con las anomalias encontradas para atravesarlas.\n\nComo sabe,
+    Interact\xFAe con las anomal\xEDas encontradas para atravesarlas.\n\nComo sabe,
     los viajes interdimensionales son inestables y muy peligrosos, es por eso que
     contar\xE1 con un tiempo limitado en esa dimensi\xF3n. Si el tiempo llega a 0
     le traeremos de vuelta inmediatamente."
