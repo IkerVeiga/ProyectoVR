@@ -15,6 +15,7 @@ public class ComportamientoRayo : MonoBehaviour
     public float velocidadTransicion; // Velocidad de la transición de movimiento
 
     private bool haChocadoConFinal = false; // Estado del rayo
+    private GameObject salaFinal;
 
     private AudioSource objectAudioSource;
     void Start()
@@ -82,6 +83,7 @@ public class ComportamientoRayo : MonoBehaviour
                     }
 
                     StartCoroutine(MoverCorroutine());
+                    salaFinal.SetActive(true);
                     break; // No necesitamos seguir rebotando
                 }
                 else if (hit.collider.CompareTag("Espejo"))
