@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2541447099416024808}
   m_Layer: 0
   m_Name: VRPortal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 131.7, y: 2.43, z: 63.79}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6761646773894360980}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92054d64a0faa45408a9132fc0c02747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
+  index: 1
 --- !u!65 &2541447099416024808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7733333
+      value: -0.771
       objectReference: {fileID: 0}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -386,8 +386,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0018782174, y: 0.02, z: 0.02}
-  m_Center: {x: 0.009060876, y: 0, z: 0.01}
+  m_Size: {x: 0.0011610338, y: 0.01840018, z: 0.015797526}
+  m_Center: {x: 0.008702297, y: 0.000027586633, z: 0.007898763}
 --- !u!65 &8476198927495179136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -407,8 +407,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.018111618, y: 0.0015607119, z: 0.02}
-  m_Center: {x: -0.00094417867, y: -0.009219623, z: 0.009999995}
+  m_Size: {x: 0.017228987, y: 0.0008435871, z: 0.015946772}
+  m_Center: {x: -0.0005028656, y: -0.008861069, z: 0.007973386}
 --- !u!65 &1854835835104317262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -428,8 +428,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.018100329, y: 0.0026033132, z: 0.02}
-  m_Center: {x: -0.0009498262, y: 0.008698318, z: 0.01}
+  m_Size: {x: 0.01738323, y: 0.001831014, z: 0.01649755}
+  m_Center: {x: -0.0005912779, y: 0.008312171, z: 0.008248777}
 --- !u!65 &2722099871004017146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -449,8 +449,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0021717919, y: 0.015809635, z: 0.02}
-  m_Center: {x: -0.008914078, y: -0.0005321413, z: 0.01}
+  m_Size: {x: 0.0012891758, y: 0.015809635, z: 0.015961887}
+  m_Center: {x: -0.008472775, y: -0.00053214084, z: 0.007980947}
 --- !u!65 &8829232538101311639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -470,8 +470,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.015975637, y: 0.016777815, z: 0.0040151505}
-  m_Center: {x: 0.000060808656, y: -0.00007401943, z: 0.0020075755}
+  m_Size: {x: 0.015975637, y: 0.016777815, z: 0.016182227}
+  m_Center: {x: 0.000060808514, y: -0.00007401953, z: 0.0080911135}
 --- !u!65 &4879527576739300071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -491,8 +491,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.02, z: 0.0044673695}
-  m_Center: {x: 0, y: 1.7763568e-17, z: 0.0022336848}
+  m_Size: {x: 0.018400174, y: 0.018400177, z: 0.0021113125}
+  m_Center: {x: 0.00008272523, y: 0.000027588045, z: 0.0010556562}
 --- !u!114 &3235174107220016494
 MonoBehaviour:
   m_ObjectHideFlags: 0
