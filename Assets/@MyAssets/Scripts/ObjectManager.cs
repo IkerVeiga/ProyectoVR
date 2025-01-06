@@ -96,9 +96,10 @@ public class ObjectManager : MonoBehaviour
     private void RepositionCrateObjectsAR()
     {
         GameObject crate = FindObjectOfType<ObjectTransfer>().gameObject;
+        Transform spawnPoint = crate.transform.GetChild(0);
         foreach (var obj in ObjectsInCrate)
         {
-            obj.transform.position = crate.transform.position;
+            obj.transform.position = spawnPoint.position;
             //obj.GetComponent<XRGrabInteractable>().enabled = false;
             //obj.GetComponent<XRGrabInteractable>().enabled = true;
         }
@@ -107,9 +108,10 @@ public class ObjectManager : MonoBehaviour
     public void RepositionCrateObjectsVR(GameObject portal) //Esto duele muchoo. (Lo llama PortalManager)
     {
         Transform crate = portal.transform.GetChild(3);
+        Transform spawnPoint = crate.transform.GetChild(0);
         foreach (var obj in ObjectsInCrate)
         {
-            obj.transform.position = crate.position;
+            obj.transform.position = spawnPoint.position;
             //obj.GetComponent<XRGrabInteractable>().enabled = false;
             //obj.GetComponent<XRGrabInteractable>().enabled = true;
         }
