@@ -16,7 +16,7 @@ public class Machine : MonoBehaviour
 
     private IEnumerator ChangeSceneCoroutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene("Credits");
     }
 }

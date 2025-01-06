@@ -70,7 +70,10 @@ public class PortalManager : MonoBehaviour
         if (scene.name == "AR")
         {
             StartCoroutine(SpawnExistingPortals());
-            StartCoroutine(SpawnNewPortal());
+            if (ARportals.Count < 3)
+            {
+                StartCoroutine(SpawnNewPortal());
+            }
             wallManager = FindObjectOfType<WallManager>();
             hasGoneToVR = false;
         } else if (scene.name == "VR")
