@@ -15,7 +15,7 @@ public class ComportamientoRayo : MonoBehaviour
     public float velocidadTransicion; // Velocidad de la transición de movimiento
 
     private bool haChocadoConFinal = false; // Estado del rayo
-    private GameObject salaFinal;
+    [SerializeField] private GameObject salaFinal;
 
     private AudioSource objectAudioSource;
     void Start()
