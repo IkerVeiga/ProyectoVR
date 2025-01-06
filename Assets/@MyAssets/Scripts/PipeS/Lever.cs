@@ -17,6 +17,7 @@ public class Lever : Pipe
         gate.OpenGate();
         actuated = true;
         StartCoroutine(FlipLeaver());
+        GetComponent<AudioSource>().Play();
     }
 
     private IEnumerator FlipLeaver()

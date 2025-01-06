@@ -1548,7 +1548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songs:
   - {fileID: 8300000, guid: 436d96ec734877440a3c69a354bb65b7, type: 3}
-  - {fileID: 8300000, guid: 1fc6d8ebe88fdbc448781b24a16be7d0, type: 3}
+  - {fileID: 8300000, guid: fdf02772e6c49b349b46a143379d4403, type: 3}
 --- !u!114 &782628383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5340,15 +5340,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5ad758051895fdb4999954a65adfc4a1, type: 2}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 28.345001
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 28.345001
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 28.223671
       objectReference: {fileID: 0}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5356,11 +5356,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.301
+      value: -1.379
       objectReference: {fileID: 0}
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5389,6 +5389,10 @@ PrefabInstance:
     - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489883619743066688, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9122586983389016314, guid: ba6725d6876c1da408bb827f603527b9, type: 3}
       propertyPath: m_Name
